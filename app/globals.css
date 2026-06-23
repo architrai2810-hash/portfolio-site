@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ink: #14161a;
+  --paper: #f6f7f9;
+  --surface: #ffffff;
+  --muted: #5a6270;
+  --line: #e3e6eb;
+  --accent: #2e5bff;
+}
+
+@supports (color: color(display-p3 1 0 0)) {
+  html {
+    color-scheme: light;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display font-semibold;
+  }
+
+  h1 {
+    @apply text-4xl leading-tight;
+  }
+
+  h2 {
+    @apply text-3xl leading-tight;
+  }
+
+  h3 {
+    @apply text-2xl leading-tight;
+  }
+
+  a {
+    @apply transition-colors;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  button {
+    @apply transition-colors;
+    font-family: inherit;
+    font-size: inherit;
+    border: none;
+    cursor: pointer;
+  }
+
+  input,
+  textarea,
+  select {
+    @apply transition-colors;
+  }
+}
+
+@layer components {
+  .container-wide {
+    @apply max-w-container mx-auto px-gutter;
+  }
+
+  .section-spacing {
+    @apply py-section;
+  }
+
+  .eyebrow {
+    @apply text-sm font-mono font-medium text-muted uppercase tracking-wider;
+  }
+
+  .btn {
+    @apply px-6 py-3 rounded transition-colors font-medium;
+  }
+
+  .btn-primary {
+    @apply btn bg-accent text-surface hover:bg-blue-700;
+  }
+
+  .btn-secondary {
+    @apply btn border border-line text-ink hover:bg-paper;
+  }
+
+  .btn-text {
+    @apply text-accent hover:text-blue-700 font-medium;
+  }
+
+  .card {
+    @apply bg-surface rounded border border-line transition-all;
+  }
+
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2;
+  }
+
+  .link-underline {
+    @apply text-accent hover:underline;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Print styles */
+@media print {
+  body {
+    background: white;
+  }
+
+  .no-print {
+    display: none;
+  }
+}
