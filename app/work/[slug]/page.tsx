@@ -12,13 +12,14 @@ import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 
 interface PageProps {
-  params: {
+  params: Promise<{
     slug: string
-  }
+  }>
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const study = getCaseStudyBySlug(params.slug)
+  const { slug } = await params
+  const study = getCaseStudyBySlug(slug)
 
   if (!study) {
     return {}
@@ -36,14 +37,15 @@ export async function generateStaticParams() {
   }))
 }
 
-export default function CaseStudyPage({ params }: PageProps) {
-  const study = getCaseStudyBySlug(params.slug)
+export default async function CaseStudyPage({ params }: PageProps) {
+  const { slug } = await params
+  const study = getCaseStudyBySlug(slug)
 
   if (!study) {
     notFound()
   }
 
-  const currentIndex = caseStudies.findIndex((s) => s.slug === study.slug)
+  const currentIndex = caseStudies.findIndex((s) => s.slug === slug)
   const nextStudy = caseStudies[currentIndex + 1]
 
   return (
