@@ -13,7 +13,7 @@
     "allowSyntheticDefaultImports": true,
     "strict": true,
     "noEmit": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "moduleResolution": "bundler",
