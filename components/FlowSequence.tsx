@@ -20,9 +20,9 @@ export default function FlowSequence({ flow }: FlowSequenceProps) {
         {steps.map((step, idx) => (
           <div key={step.n} className="space-y-4">
             {/* Step number and name */}
-            <div className="space-y-2 min-h-24">
+            <div className="space-y-2 h-32">
               <div className="font-mono text-2xl font-bold text-accent">{String(step.n).padStart(2, '0')}</div>
-              <h4 className="font-display text-lg font-semibold">{step.name}</h4>
+              <h4 className="font-display text-lg font-semibold leading-tight">{step.name}</h4>
               {step.stage && (
                 <div className="text-xs font-mono text-muted uppercase tracking-wider">{step.stage}</div>
               )}

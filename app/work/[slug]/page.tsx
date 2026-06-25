@@ -92,13 +92,15 @@ export default async function CaseStudyPage({ params }: PageProps) {
       {/* Hero image */}
       {study.hero && (
         <SectionWrapper>
-          <div className="relative w-full aspect-video rounded-lg overflow-hidden border border-line bg-surface">
+          <div className="relative w-full rounded-lg overflow-hidden border border-line bg-surface">
             <Image
               src={study.hero}
               alt={study.title}
-              fill
-              className="object-cover"
+              width={1200}
+              height={800}
+              className="w-full h-auto"
               priority
+              quality={95}
             />
           </div>
         </SectionWrapper>

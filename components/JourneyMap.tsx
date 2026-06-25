@@ -31,8 +31,8 @@ export default function JourneyMap({ journey }: JourneyMapProps) {
   return (
     <div className="space-y-8">
       {/* Emotion Curve Chart */}
-      <div className="bg-surface rounded-lg border border-line p-8 overflow-x-auto">
-        <svg viewBox="0 0 100 130" className="w-full h-96 min-w-max">
+      <div className="bg-surface rounded-lg border border-line overflow-x-auto">
+        <svg viewBox="0 0 100 130" className="w-full h-96 min-w-max" style={{ display: 'block', padding: '2rem' }}>
           {/* Grid */}
           <defs>
             <linearGradient id="emotionGradient" x1="0%" y1="0%" x2="0%" y2="100%">
