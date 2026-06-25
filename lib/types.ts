@@ -46,7 +46,6 @@ export interface CaseStudyFlow {
 
 export interface CaseStudyPrototype {
   figmaUrl?: string
-  gif?: string
 }
 
 export interface CaseStudyStat {

@@ -187,8 +187,7 @@ export const infrawealth: CaseStudy = {
     ],
   },
   prototype: {
-    figmaUrl: 'https://figma.com/proto/example',
-    gif: '/case-studies/infrawealth/prototype.gif',
+    figmaUrl: 'https://www.figma.com/proto/5vFvDOvmdYhIX3RiYdyrnO/My-InfraWealth?node-id=196-273&t=kdn78j0P0mW6WNab-1',
   },
   outcome: {
     summary:

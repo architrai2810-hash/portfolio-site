@@ -162,32 +162,27 @@ export default async function CaseStudyPage({ params }: PageProps) {
       </SectionWrapper>
 
       {/* Prototype */}
-      {study.prototype && (
+      {study.prototype?.figmaUrl && (
         <SectionWrapper className="bg-surface border-y border-line">
           <div className="space-y-6">
             <div className="space-y-4">
               <h2 className="font-display text-2xl font-semibold">Prototype</h2>
-              {study.prototype.figmaUrl && (
-                <a
-                  href={study.prototype.figmaUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-primary inline-block"
-                >
-                  View the interactive Figma prototype
-                </a>
-              )}
+              <a
+                href={study.prototype.figmaUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary inline-block"
+              >
+                Open in Figma
+              </a>
             </div>
-            {study.prototype.gif && (
-              <div className="relative w-full aspect-video rounded-lg overflow-hidden border border-line bg-paper">
-                <Image
-                  src={study.prototype.gif}
-                  alt="Prototype GIF"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-            )}
+            <div className="relative w-full aspect-video rounded-lg overflow-hidden border border-line bg-paper">
+              <iframe
+                src={`https://www.figma.com/embed?embed_host=share&url=${encodeURIComponent(study.prototype.figmaUrl)}`}
+                allowFullScreen
+                className="absolute inset-0 w-full h-full"
+              />
+            </div>
           </div>
         </SectionWrapper>
       )}
