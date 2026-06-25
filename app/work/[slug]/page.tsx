@@ -163,10 +163,10 @@ export default async function CaseStudyPage({ params }: PageProps) {
 
       {/* Prototype */}
       {study.prototype?.figmaUrl && (
-        <SectionWrapper className="bg-surface border-y border-line">
-          <div className="space-y-6">
+        <SectionWrapper className="bg-black">
+          <div className="space-y-8">
             <div className="space-y-4">
-              <h2 className="font-display text-2xl font-semibold">Prototype</h2>
+              <h2 className="font-display text-2xl font-semibold text-white">Prototype</h2>
               <a
                 href={study.prototype.figmaUrl}
                 target="_blank"
@@ -176,12 +176,22 @@ export default async function CaseStudyPage({ params }: PageProps) {
                 Open in Figma
               </a>
             </div>
-            <div className="relative w-full aspect-video rounded-lg overflow-hidden border border-line bg-black">
-              <iframe
-                src={`https://www.figma.com/embed?embed_host=share&url=${encodeURIComponent(`${study.prototype.figmaUrl}${study.prototype.figmaUrl.includes('?') ? '&' : '?'}scaling=contain`)}`}
-                allowFullScreen
-                className="absolute inset-0 w-full h-full"
-              />
+            {/* iPhone 16 device frame, matching Figma's Present mode */}
+            <div className="relative mx-auto" style={{ maxWidth: '320px' }}>
+              <div className="relative rounded-[2.75rem] p-[3px] border-2 border-white/70 shadow-[0_0_40px_rgba(255,255,255,0.08)]">
+                {/* Screen */}
+                <div className="relative w-full aspect-[9/19.5] rounded-[2.5rem] overflow-hidden bg-black">
+                  <iframe
+                    src={`https://www.figma.com/embed?embed_host=share&url=${encodeURIComponent(`${study.prototype.figmaUrl}${study.prototype.figmaUrl.includes('?') ? '&' : '?'}scaling=contain`)}`}
+                    allowFullScreen
+                    className="absolute inset-0 w-full h-full"
+                  />
+                  {/* Dynamic Island */}
+                  <div className="absolute top-2 left-1/2 -translate-x-1/2 w-20 h-5 bg-black rounded-full z-10" />
+                  {/* Home indicator */}
+                  <div className="absolute bottom-1.5 left-1/2 -translate-x-1/2 w-28 h-1 bg-white/60 rounded-full z-10" />
+                </div>
+              </div>
             </div>
           </div>
         </SectionWrapper>
