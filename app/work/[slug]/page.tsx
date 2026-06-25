@@ -220,7 +220,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
       </SectionWrapper>
 
       {/* Footer CTA */}
-      <SectionWrapper>
+      <SectionWrapper className="py-12">
         <div className="flex flex-col items-center justify-center gap-4">
           {nextStudy ? (
             <Link href={`/work/${nextStudy.slug}`} className="btn-primary">

@@ -123,6 +123,7 @@ export const infrawealth: CaseStudy = {
       {
         n: 1,
         name: 'Launch Screen',
+        stage: 'Entry',
         keyDecision: 'App name, CTA and microcopy only.',
         why: 'A minimal first screen, no friction into onboarding.',
         image: '/case-studies/infrawealth/01-launch.png',

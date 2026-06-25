@@ -32,7 +32,7 @@ export default function JourneyMap({ journey }: JourneyMapProps) {
     <div className="space-y-8">
       {/* Emotion Curve Chart */}
       <div className="bg-surface rounded-lg border border-line p-8 overflow-x-auto">
-        <svg viewBox="0 0 100 100" className="w-full h-96 min-w-max">
+        <svg viewBox="0 0 100 130" className="w-full h-96 min-w-max">
           {/* Grid */}
           <defs>
             <linearGradient id="emotionGradient" x1="0%" y1="0%" x2="0%" y2="100%">
@@ -65,7 +65,7 @@ export default function JourneyMap({ journey }: JourneyMapProps) {
                 <circle cx={x} cy={y} r="1.5" fill="#2E5BFF" vectorEffect="non-scaling-stroke" />
                 <text
                   x={x}
-                  y="95"
+                  y="115"
                   textAnchor="middle"
                   fontSize="3"
                   fill="#5A6270"
