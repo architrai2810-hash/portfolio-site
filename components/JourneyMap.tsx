@@ -31,52 +31,69 @@ export default function JourneyMap({ journey }: JourneyMapProps) {
   return (
     <div className="space-y-8">
       {/* Emotion Curve Chart */}
-      <div className="bg-surface rounded-lg border border-line py-8 px-8">
-        <svg viewBox="0 0 100 130" preserveAspectRatio="none" className="w-full h-96 block">
-          {/* Grid */}
-          <defs>
-            <linearGradient id="emotionGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" stopColor="#2E5BFF" stopOpacity="0.2" />
-              <stop offset="100%" stopColor="#2E5BFF" stopOpacity="0" />
-            </linearGradient>
-          </defs>
+      <div className="bg-surface rounded-lg border border-line p-8">
+        {/* Plot area: line and fill stretch to fill the box, dots stay circular */}
+        <div className="relative h-64 sm:h-72">
+          <svg viewBox="0 0 100 100" preserveAspectRatio="none" className="absolute inset-0 w-full h-full">
+            <defs>
+              <linearGradient id="emotionGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stopColor="#2E5BFF" stopOpacity="0.2" />
+                <stop offset="100%" stopColor="#2E5BFF" stopOpacity="0" />
+              </linearGradient>
+            </defs>
 
-          {/* Emotion curve fill */}
-          <path
-            d={`${pathD} L 100,100 L 0,100 Z`}
-            fill="url(#emotionGradient)"
-          />
+            {/* Emotion curve fill */}
+            <path d={`${pathD} L 100,100 L 0,100 Z`} fill="url(#emotionGradient)" />
 
-          {/* Emotion curve line */}
-          <path
-            d={pathD}
-            stroke="#2E5BFF"
-            strokeWidth="2"
-            fill="none"
-            vectorEffect="non-scaling-stroke"
-          />
+            {/* Emotion curve line */}
+            <path
+              d={pathD}
+              stroke="#2E5BFF"
+              strokeWidth="2"
+              fill="none"
+              vectorEffect="non-scaling-stroke"
+            />
+          </svg>
 
-          {/* Stage markers */}
+          {/* Stage markers, kept as fixed-size circles so they don't distort */}
           {stages.map((stage, idx) => {
             const x = (idx / (stages.length - 1)) * 100
             const y = 100 - ((stage.emotion - minEmotion) / emotionRange) * 80
             return (
-              <g key={idx}>
-                <circle cx={x} cy={y} r="1.5" fill="#2E5BFF" vectorEffect="non-scaling-stroke" />
-                <text
-                  x={x}
-                  y="115"
-                  textAnchor="middle"
-                  fontSize="3"
-                  fill="#5A6270"
-                  vectorEffect="non-scaling-stroke"
-                >
-                  {stage.name}
-                </text>
-              </g>
+              <div
+                key={idx}
+                className="absolute w-3 h-3 rounded-full bg-accent border-2 border-surface"
+                style={{ left: `${x}%`, top: `${y}%`, transform: 'translate(-50%, -50%)' }}
+              />
             )
           })}
-        </svg>
+        </div>
+
+        {/* Stage labels, rendered as normal text so they stay legible */}
+        <div className="relative h-5 mt-4">
+          {stages.map((stage, idx) => {
+            const x = (idx / (stages.length - 1)) * 100
+            const isFirst = idx === 0
+            const isLast = idx === stages.length - 1
+            return (
+              <div
+                key={idx}
+                className={`absolute text-xs sm:text-sm font-mono text-muted whitespace-nowrap ${
+                  isFirst ? 'text-left' : isLast ? 'text-right' : 'text-center'
+                }`}
+                style={
+                  isFirst
+                    ? { left: 0 }
+                    : isLast
+                      ? { right: 0 }
+                      : { left: `${x}%`, transform: 'translateX(-50%)' }
+                }
+              >
+                {stage.name}
+              </div>
+            )
+          })}
+        </div>
       </div>
 
       {/* Journey Table */}
