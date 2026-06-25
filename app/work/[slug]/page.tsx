@@ -176,9 +176,9 @@ export default async function CaseStudyPage({ params }: PageProps) {
                 Open in Figma
               </a>
             </div>
-            <div className="relative w-full max-w-sm mx-auto aspect-[9/19.5] rounded-lg overflow-hidden border border-line bg-black">
+            <div className="relative w-full aspect-video rounded-lg overflow-hidden border border-line bg-black">
               <iframe
-                src={`https://www.figma.com/embed?embed_host=share&url=${encodeURIComponent(study.prototype.figmaUrl)}`}
+                src={`https://www.figma.com/embed?embed_host=share&url=${encodeURIComponent(`${study.prototype.figmaUrl}${study.prototype.figmaUrl.includes('?') ? '&' : '?'}scaling=contain`)}`}
                 allowFullScreen
                 className="absolute inset-0 w-full h-full"
               />
