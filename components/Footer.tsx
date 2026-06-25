@@ -51,7 +51,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://linkedin.com/in/architrai"
+                  href="https://www.linkedin.com/in/archit-rai/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm text-muted hover:text-ink transition-colors"

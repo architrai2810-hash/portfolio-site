@@ -127,7 +127,7 @@ export default function Home() {
               Email me
             </a>
             <a
-              href="https://linkedin.com/in/architrai"
+              href="https://www.linkedin.com/in/archit-rai/"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-secondary"
