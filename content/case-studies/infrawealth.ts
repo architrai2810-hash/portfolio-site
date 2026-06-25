@@ -130,6 +130,7 @@ export const infrawealth: CaseStudy = {
       {
         n: 2,
         name: 'Onboarding',
+        stage: 'Setup',
         keyDecision: 'Labelled fields with placeholder examples.',
         why: 'Examples cut errors and keep sign-up smooth.',
         image: '/case-studies/infrawealth/02-onboarding.png',
@@ -169,6 +170,7 @@ export const infrawealth: CaseStudy = {
       {
         n: 7,
         name: 'Wishlist',
+        stage: 'Discover',
         keyDecision: 'A two-column card grid with two primary actions, Remove and Details.',
         why: 'Light and scannable, drill in only when ready.',
         image: '/case-studies/infrawealth/07-wishlist.png',
