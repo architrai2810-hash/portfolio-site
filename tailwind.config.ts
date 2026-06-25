@@ -41,7 +41,7 @@ const config: Config = {
       },
       spacing: {
         gutter: 'clamp(1.5rem, 5vw, 3rem)',
-        section: 'clamp(6rem, 12vw, 8rem)',
+        section: 'clamp(3.5rem, 7vw, 5rem)',
       },
     },
   },

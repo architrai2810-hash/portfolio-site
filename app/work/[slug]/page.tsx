@@ -53,14 +53,14 @@ export default async function CaseStudyPage({ params }: PageProps) {
       <Nav />
 
       {/* Back link */}
-      <SectionWrapper className="pt-24 sm:pt-32">
+      <SectionWrapper className="pt-24 sm:pt-28 pb-0">
         <Link href="/#work" className="btn-text text-sm">
           Back to all work
         </Link>
       </SectionWrapper>
 
       {/* Header */}
-      <SectionWrapper className="space-y-8">
+      <SectionWrapper className="space-y-8 pt-8">
         <div className="space-y-4">
           <h1 className="font-display text-4xl sm:text-5xl font-semibold">{study.title}</h1>
           <p className="text-xl text-muted max-w-prose">{study.subtitle}</p>
@@ -91,7 +91,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
 
       {/* Hero image */}
       {study.hero && (
-        <SectionWrapper>
+        <SectionWrapper className="pt-0">
           <div className="relative w-full rounded-lg overflow-hidden border border-line bg-surface">
             <Image
               src={study.hero}

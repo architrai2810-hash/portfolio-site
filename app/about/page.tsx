@@ -26,14 +26,14 @@ export default function AboutPage() {
       <Nav />
 
       {/* Back link */}
-      <SectionWrapper className="pt-24 sm:pt-32">
+      <SectionWrapper className="pt-24 sm:pt-28 pb-0">
         <Link href="/" className="btn-text text-sm">
           Back to home
         </Link>
       </SectionWrapper>
 
       {/* Header */}
-      <SectionWrapper className="space-y-8">
+      <SectionWrapper className="space-y-8 pt-8">
         <h1 className="font-display text-4xl sm:text-5xl font-semibold">About</h1>
         <p className="text-xl text-muted max-w-prose">
           I'm a product designer focused on building clear, usable interfaces for complex products.

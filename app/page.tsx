@@ -12,7 +12,7 @@ export default function Home() {
       <Nav />
 
       {/* Hero */}
-      <SectionWrapper className="pt-32 sm:pt-40">
+      <SectionWrapper className="pt-28 sm:pt-32">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <div className="eyebrow">Product / UI-UX Designer</div>
