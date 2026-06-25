@@ -163,17 +163,19 @@ export default async function CaseStudyPage({ params }: PageProps) {
       {study.prototype && (
         <SectionWrapper className="bg-surface border-y border-line">
           <div className="space-y-6">
-            <h2 className="font-display text-2xl font-semibold">Prototype</h2>
-            {study.prototype.figmaUrl && (
-              <a
-                href={study.prototype.figmaUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary"
-              >
-                View the interactive Figma prototype
-              </a>
-            )}
+            <div className="space-y-4">
+              <h2 className="font-display text-2xl font-semibold">Prototype</h2>
+              {study.prototype.figmaUrl && (
+                <a
+                  href={study.prototype.figmaUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary inline-block"
+                >
+                  View the interactive Figma prototype
+                </a>
+              )}
+            </div>
             {study.prototype.gif && (
               <div className="relative w-full aspect-video rounded-lg overflow-hidden border border-line bg-paper">
                 <Image
@@ -219,18 +221,16 @@ export default async function CaseStudyPage({ params }: PageProps) {
 
       {/* Footer CTA */}
       <SectionWrapper>
-        <div className="flex items-center justify-between">
-          <div>
-            {nextStudy ? (
-              <Link href={`/work/${nextStudy.slug}`} className="btn-text">
-                Next project: {nextStudy.title}
-              </Link>
-            ) : (
-              <Link href="/#work" className="btn-text">
-                Back to all work
-              </Link>
-            )}
-          </div>
+        <div className="flex flex-col items-center justify-center gap-4">
+          {nextStudy ? (
+            <Link href={`/work/${nextStudy.slug}`} className="btn-primary">
+              Next project: {nextStudy.title}
+            </Link>
+          ) : (
+            <Link href="/#work" className="btn-primary">
+              Back to all work
+            </Link>
+          )}
         </div>
       </SectionWrapper>
 
