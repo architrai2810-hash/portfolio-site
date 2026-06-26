@@ -87,4 +87,5 @@ export interface CaseStudy {
   learnings: string[]
   hero?: string
   thumbnail?: string
+  screenOrientation?: 'mobile' | 'desktop'
 }

@@ -157,7 +157,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
       <SectionWrapper>
         <div className="space-y-6">
           <h2 className="font-display text-2xl font-semibold">User Flow And Solution</h2>
-          <FlowSequence flow={study.flow} />
+          <FlowSequence flow={study.flow} screenOrientation={study.screenOrientation} />
         </div>
       </SectionWrapper>
 

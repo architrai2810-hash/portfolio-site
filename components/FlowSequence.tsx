@@ -3,10 +3,13 @@ import type { CaseStudyFlow } from '@/lib/types'
 
 interface FlowSequenceProps {
   flow: CaseStudyFlow
+  screenOrientation?: 'mobile' | 'desktop'
 }
 
-export default function FlowSequence({ flow }: FlowSequenceProps) {
+export default function FlowSequence({ flow, screenOrientation = 'mobile' }: FlowSequenceProps) {
   const { note, steps } = flow
+  const isMobile = screenOrientation === 'mobile'
+  const aspectRatio = isMobile ? 'aspect-[9/19.5]' : 'aspect-video'
 
   return (
     <div className="space-y-8">
@@ -29,7 +32,7 @@ export default function FlowSequence({ flow }: FlowSequenceProps) {
             </div>
 
             {/* Image placeholder */}
-            <div className="relative bg-paper rounded-lg border border-line aspect-[9/19.5] overflow-hidden">
+            <div className={`relative bg-paper rounded-lg border border-line ${aspectRatio} overflow-hidden`}>
               {step.image ? (
                 <Image
                   src={step.image}
