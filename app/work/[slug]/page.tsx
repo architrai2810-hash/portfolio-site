@@ -180,7 +180,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
             <div className="relative mx-auto" style={{ maxWidth: '320px' }}>
               <div className="relative rounded-[2.75rem] p-[3px] border-2 border-white/70 shadow-[0_0_40px_rgba(255,255,255,0.08)]">
                 {/* Screen */}
-                <div className="relative w-full aspect-[9/18.5] rounded-[2.5rem] overflow-hidden bg-black">
+                <div className="relative w-full aspect-[9/20.5] rounded-[2.5rem] overflow-hidden bg-black">
                   <iframe
                     src={`${study.prototype.figmaUrl.replace('www.figma.com/proto', 'embed.figma.com/proto')}&embed-host=share&hide-ui=1&hotspot-hints=0&scaling=contain&content-scaling=fixed`}
                     allowFullScreen
