@@ -181,12 +181,12 @@ export default async function CaseStudyPage({ params }: PageProps) {
               <div className="relative mx-auto" style={{ maxWidth: '950px' }}>
                 {/* Lid: aluminum edge + black bezel, narrower than the base so the base reads as wider */}
                 <div className="relative mx-auto" style={{ width: '93%' }}>
+                  {/* Camera notch strip, protruding above the top edge of the lid */}
+                  <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-24 h-3 bg-black rounded-md z-20" />
                   {/* Aluminum edge frame, visibly thicker than the black bezel inside it */}
                   <div className="relative rounded-2xl p-1.5 bg-gradient-to-b from-gray-300 via-gray-400 to-gray-500 shadow-[0_30px_70px_rgba(0,0,0,0.5)]">
                     {/* Black bezel */}
                     <div className="relative rounded-xl bg-black p-3">
-                      {/* Camera notch */}
-                      <div className="absolute top-1.5 left-1/2 -translate-x-1/2 w-2.5 h-2.5 rounded-full bg-zinc-900 ring-1 ring-white/20 z-10" />
                       {/* Content area */}
                       <div className="relative w-full rounded-sm overflow-hidden bg-black" style={{ aspectRatio: '1440/1024' }}>
                         <iframe
