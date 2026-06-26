@@ -124,7 +124,7 @@ export const uxverse: CaseStudy = {
         stage: 'Hear',
         keyDecision: 'Fixed nav and Register CTA above an illustration that captures the spirit of the event.',
         why: 'Visuals stand out over text, and the registration button always stays in reach.',
-        image: '/case-studies/uxverse/01-home.png',
+        image: '/case-studies/uxverse/01.png',
       },
       {
         n: 2,
@@ -132,7 +132,7 @@ export const uxverse: CaseStudy = {
         stage: 'Hear',
         keyDecision: 'A tagline followed by a live countdown.',
         why: 'The countdown nudges users toward registration.',
-        image: '/case-studies/uxverse/02-countdown.png',
+        image: '/case-studies/uxverse/02.png',
       },
       {
         n: 3,
@@ -140,7 +140,7 @@ export const uxverse: CaseStudy = {
         stage: 'Explore',
         keyDecision: 'Stat cards, a press quote and a newsletter sign-up.',
         why: 'Social proof builds trust, and the newsletter keeps interested users in the loop.',
-        image: '/case-studies/uxverse/03-stats.png',
+        image: '/case-studies/uxverse/03.png',
       },
       {
         n: 4,
@@ -148,7 +148,7 @@ export const uxverse: CaseStudy = {
         stage: 'Navigate',
         keyDecision: 'The footer is split into four key sections.',
         why: 'Grouping links helps the user find what they need quickly.',
-        image: '/case-studies/uxverse/04-footer.png',
+        image: '/case-studies/uxverse/04.png',
       },
       {
         n: 5,
@@ -156,7 +156,7 @@ export const uxverse: CaseStudy = {
         stage: 'Explore / Decide',
         keyDecision: 'A bold tagline with a brief description of the venue and event details.',
         why: 'Keeping the copy brief means the user gets only what\'s relevant, not buried in detail.',
-        image: '/case-studies/uxverse/05-about.png',
+        image: '/case-studies/uxverse/05.png',
       },
       {
         n: 6,
@@ -164,7 +164,7 @@ export const uxverse: CaseStudy = {
         stage: 'Decide',
         keyDecision: 'Offerings boxes and a \'Who Should Attend\' section.',
         why: 'A clear set of expectations helps users decide with confidence.',
-        image: '/case-studies/uxverse/06-what-awaits.png',
+        image: '/case-studies/uxverse/06.png',
       },
       {
         n: 7,
@@ -172,7 +172,7 @@ export const uxverse: CaseStudy = {
         stage: 'Explore',
         keyDecision: 'A three-column grid with larger images for key names.',
         why: 'Scannable, and it helps the top speakers stand out.',
-        image: '/case-studies/uxverse/07-speakers.png',
+        image: '/case-studies/uxverse/07.png',
       },
       {
         n: 8,
@@ -180,7 +180,7 @@ export const uxverse: CaseStudy = {
         stage: 'Explore',
         keyDecision: 'A short intro followed by a logo carousel.',
         why: 'The intro frames who the partners are as a group, while large logos are recognised with ease.',
-        image: '/case-studies/uxverse/08-partners.png',
+        image: '/case-studies/uxverse/08.png',
       },
       {
         n: 9,
@@ -188,7 +188,7 @@ export const uxverse: CaseStudy = {
         stage: 'Explore',
         keyDecision: 'An asymmetric grid of last year\'s highlights.',
         why: 'Varying the card sizes draws attention to standout moments and gives an immersive feel.',
-        image: '/case-studies/uxverse/09-media.png',
+        image: '/case-studies/uxverse/09.png',
       },
       {
         n: 10,
@@ -196,7 +196,7 @@ export const uxverse: CaseStudy = {
         stage: 'Register',
         keyDecision: 'A bold heading leading into a three-field form with a student registration checkbox.',
         why: 'Quick for anyone to register, and inclusive of students.',
-        image: '/case-studies/uxverse/10-registration.png',
+        image: '/case-studies/uxverse/10.png',
       },
       {
         n: 11,
@@ -204,7 +204,7 @@ export const uxverse: CaseStudy = {
         stage: 'Anticipate',
         keyDecision: 'Acknowledges the registration and informs the user about the email follow-up.',
         why: 'Reassures them the registration went through and that further details will follow by email.',
-        image: '/case-studies/uxverse/11-confirmation.png',
+        image: '/case-studies/uxverse/11.png',
       },
     ],
   },
