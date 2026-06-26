@@ -182,7 +182,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
                 {/* Screen */}
                 <div className="relative w-full aspect-[9/19.5] rounded-[2.5rem] overflow-hidden bg-black">
                   <iframe
-                    src={`https://www.figma.com/embed?embed_host=share&hide-ui=1&url=${encodeURIComponent(`${study.prototype.figmaUrl}${study.prototype.figmaUrl.includes('?') ? '&' : '?'}scaling=contain&content-scaling=fixed&hide-ui=1`)}`}
+                    src={`${study.prototype.figmaUrl.replace('www.figma.com/proto', 'embed.figma.com/proto')}&embed-host=share&hide-ui=1&hotspot-hints=0&scaling=contain&content-scaling=fixed`}
                     allowFullScreen
                     className="absolute inset-0 w-full h-full"
                   />
