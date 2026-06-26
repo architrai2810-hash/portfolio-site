@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'About - Archit Rai',
-  description: 'Product designer, NIFT Bhopal 2026, working on SaaS dashboards at Actin Technologies.',
+  description: 'UI/UX and product designer completing a B.Des at the National Institute of Fashion Technology.',
 }
 
 export default function AboutPage() {
@@ -16,9 +16,15 @@ export default function AboutPage() {
     'Photoshop',
     'InDesign',
     'Premiere Pro',
+    'Procreate',
     'Fusion360',
     'AutoCAD',
     'Blender',
+    'Claude',
+    'ChatGPT',
+    'Gemini',
+    'Figma Make',
+    'Google Stitch',
   ]
 
   return (
@@ -41,19 +47,15 @@ export default function AboutPage() {
       </SectionWrapper>
 
       {/* Main content */}
-      <SectionWrapper>
+      <SectionWrapper className="pt-0">
         <div className="max-w-prose space-y-8 text-lg leading-relaxed text-muted">
           <div className="space-y-4">
             <h2 className="font-display text-2xl font-semibold text-ink">The background</h2>
             <p>
-              I graduated from NIFT Bhopal in 2026 with a B.Des in Product Experience Design. The program taught me to think like a researcher before a designer. Before the degree, I spent time with CAD and 3D modeling, which taught me to think spatially and solve for constraints.
+              My focus is UI/UX and product design — research-led flows, clean visual systems, and interfaces that hold up under real use. I'm completing my B.Des in Product Experience Design at the National Institute of Fashion Technology, expected in 2026, where the program taught me to think like a researcher before a designer. Before that, I freelanced as a graphic designer and video editor, and spent time with CAD and 3D modeling, work that sharpened how I think spatially and solve for constraints.
             </p>
-          </div>
-
-          <div className="space-y-4">
-            <h2 className="font-display text-2xl font-semibold text-ink">Right now</h2>
             <p>
-              I'm interning at Actin Technologies in Pune, working on SaaS dashboard products end to end. I've been interviewing users, building personas, mapping their journeys, sketching flows, and designing high-fidelity interfaces in Figma. I've also run alpha tests and watched people actually use what I designed, which is the part that sticks with me.
+              I completed a UI/UX design internship at Actin Technologies in Pune, working on SaaS dashboard products end to end: interviewing users, building personas, mapping journeys, sketching flows, designing high-fidelity interfaces in Figma, and running alpha tests to watch people actually use what I designed. I'd previously interned in UI/UX at Leo IT Services, where I worked directly with users to shape product decisions.
             </p>
           </div>
 
@@ -67,7 +69,7 @@ export default function AboutPage() {
           <div className="space-y-4">
             <h2 className="font-display text-2xl font-semibold text-ink">Tools</h2>
             <p>
-              I design in Figma and prototype there too. I'm comfortable in Illustrator and Photoshop for visual design, and InDesign for layouts. For motion, I use Premiere Pro. For 3D and product design work, I use Fusion360, AutoCAD, and Blender.
+              I design in Figma and prototype there too. I'm comfortable in Illustrator and Photoshop for visual design, and InDesign for layouts. For motion, I use Premiere Pro, and I still sketch on Procreate when I want to think with a pencil instead of a cursor. For 3D and product design work, I use Fusion360, AutoCAD, and Blender. For rapid iteration and exploring ideas quickly, I also use AI tools like Claude, ChatGPT, Gemini, Figma Make, and Google Stitch.
             </p>
           </div>
 

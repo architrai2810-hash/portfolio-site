@@ -20,7 +20,7 @@ export default function Home() {
               I design clear, usable interfaces for complex products.
             </h1>
             <p className="text-lg text-muted max-w-prose leading-relaxed">
-              I'm a product designer working on SaaS dashboards at Actin Technologies, Pune. I graduated from NIFT Bhopal in 2026 with a B.Des in Product Experience Design.
+              I'm a product designer focused on UI/UX, completing my B.Des in Product Experience Design at the National Institute of Fashion Technology.
             </p>
             <div className="flex gap-4 pt-4">
               <a href="#work" className="btn-primary">
@@ -50,7 +50,7 @@ export default function Home() {
       <SectionWrapper className="py-8">
         <div className="space-y-4 sm:space-y-0 sm:flex sm:items-center sm:justify-between">
           <div className="text-sm text-muted">
-            Currently designing SaaS dashboards at <span className="font-semibold">Actin Technologies, Pune</span>
+            Recently interned in UI/UX at <span className="font-semibold">Actin Technologies, Pune</span>
           </div>
           <div className="flex flex-wrap gap-2">
             {[
@@ -99,10 +99,10 @@ export default function Home() {
           <h2 className="font-display text-3xl font-semibold">About</h2>
           <div className="space-y-4 text-lg text-muted leading-relaxed">
             <p>
-              I'm early-career, hungry to solve real problems, and I care about how things feel to use. I started with drafting and CAD, moved into product design, and discovered I love the moment when clarity clicks and a complex interface becomes intuitive.
+              I'm early-career, hungry to solve real problems, and I care about how things feel to use. My focus is UI/UX and product design, sharpened by an earlier path through drafting, CAD, and visual design.
             </p>
             <p>
-              At NIFT Bhopal I learned to think like a researcher before a designer. At Actin Technologies I've been designing fintech dashboards end to end, from user interviews to prototypes that users actually test.
+              At the National Institute of Fashion Technology, I learned to think like a researcher before a designer. I completed a UI/UX design internship at Actin Technologies, designing fintech dashboards end to end, from user interviews to prototypes that users actually test.
             </p>
             <p>
               I'm drawn to problems in fintech, real estate, and tools. I work in Figma, and I'm comfortable in Illustrator, Photoshop, Blender, and Fusion360.
