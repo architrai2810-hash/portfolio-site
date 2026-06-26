@@ -179,21 +179,24 @@ export default async function CaseStudyPage({ params }: PageProps) {
             {/* Device frame: iPhone for mobile, MacBook for desktop */}
             {study.screenOrientation === 'desktop' ? (
               <div className="relative mx-auto" style={{ maxWidth: '900px' }}>
-                {/* MacBook frame: silver bezel with rounded corners */}
-                <div className="relative rounded-2xl p-3 bg-gradient-to-b from-slate-300 to-slate-400 shadow-[0_20px_60px_rgba(0,0,0,0.3)]">
-                  {/* Screen bezel (thin silver border inside) */}
-                  <div className="relative rounded-lg p-1 bg-gradient-to-b from-slate-200 to-slate-300">
-                    {/* Content area */}
-                    <div className="relative w-full rounded-md overflow-hidden bg-black" style={{ aspectRatio: '1440/1024' }}>
-                      <iframe
-                        src={`${study.prototype.figmaUrl.replace('www.figma.com/proto', 'embed.figma.com/proto')}&embed-host=share&hide-ui=1&hotspot-hints=0&scaling=scale-down-width`}
-                        allowFullScreen
-                        className="absolute inset-0 w-full h-full"
-                      />
-                    </div>
+                {/* MacBook screen: thin black bezel, equal on all sides, with camera notch */}
+                <div className="relative rounded-2xl border border-white/10 bg-black p-2.5 shadow-[0_30px_70px_rgba(0,0,0,0.5)]">
+                  {/* Camera notch */}
+                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-16 h-2.5 bg-black rounded-b-md z-10" />
+                  {/* Content area */}
+                  <div className="relative w-full rounded-sm overflow-hidden bg-black" style={{ aspectRatio: '1440/1024' }}>
+                    <iframe
+                      src={`${study.prototype.figmaUrl.replace('www.figma.com/proto', 'embed.figma.com/proto')}&embed-host=share&hide-ui=1&hotspot-hints=0&scaling=scale-down-width`}
+                      allowFullScreen
+                      className="absolute inset-0 w-full h-full"
+                    />
                   </div>
-                  {/* MacBook bottom bezel/stand area */}
-                  <div className="relative h-6 bg-gradient-to-b from-slate-300 to-slate-400 rounded-b-2xl" />
+                </div>
+                {/* Hinge */}
+                <div className="h-1.5 bg-gradient-to-b from-zinc-800 to-zinc-700" />
+                {/* MacBook base / keyboard deck */}
+                <div className="relative h-4 rounded-b-xl bg-gradient-to-b from-gray-200 via-gray-300 to-gray-400 shadow-[0_8px_20px_rgba(0,0,0,0.25)]">
+                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-1 rounded-b bg-gray-400/60" />
                 </div>
               </div>
             ) : (
