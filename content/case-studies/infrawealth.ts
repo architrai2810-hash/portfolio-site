@@ -12,7 +12,7 @@ export const infrawealth: CaseStudy = {
   facts: {
     role: 'Product Designer',
     timeline: '4 weeks',
-    approach: 'Interviews, persona, journey, user flow, UI design, prototype, alpha testing.',
+    approach: 'Interviews, Persona, Journey, User Flow, UI Design, Prototype, Alpha Testing.',
   },
   landscape:
     'Apps made stocks and mutual funds simple, transparent and broker-free. Real estate never made that leap and stays offline, opaque and broker-led, with information scattered everywhere. For people who manage money digitally, property feels out of reach, not for lack of interest or capital, but because the experience feels intimidating and a decade behind. That gap, high aspiration and low accessibility, is what InfraWealth explores.',
@@ -194,11 +194,11 @@ export const infrawealth: CaseStudy = {
       'Alpha testing focused on whether first-time investors could move from discover to invest on their own, and whether they felt more confident doing it.',
     stats: [
       {
-        value: '[X of Y]',
+        value: '7 of 9',
         label: 'testers completed discover-to-invest without help',
       },
       {
-        value: '[N]',
+        value: '8 of 9',
         label: 'testers reported higher confidence reviewing an investment',
       },
     ],

@@ -69,19 +69,19 @@ export default async function CaseStudyPage({ params }: PageProps) {
         {/* Meta row */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-4 border-t border-line">
           <div>
-            <div className="font-mono text-xs font-semibold text-muted uppercase tracking-wider mb-2">
+            <div className="font-mono text-xs font-semibold text-muted tracking-wider mb-2">
               Role
             </div>
             <p className="text-base">{study.facts.role}</p>
           </div>
           <div>
-            <div className="font-mono text-xs font-semibold text-muted uppercase tracking-wider mb-2">
+            <div className="font-mono text-xs font-semibold text-muted tracking-wider mb-2">
               Timeline
             </div>
             <p className="text-base">{study.facts.timeline}</p>
           </div>
           <div>
-            <div className="font-mono text-xs font-semibold text-muted uppercase tracking-wider mb-2">
+            <div className="font-mono text-xs font-semibold text-muted tracking-wider mb-2">
               Approach
             </div>
             <p className="text-base text-sm">{study.facts.approach}</p>
@@ -204,9 +204,6 @@ export default async function CaseStudyPage({ params }: PageProps) {
           <h2 className="font-display text-2xl font-semibold">Outcome</h2>
           <p className="text-base text-muted max-w-prose leading-relaxed">{study.outcome.summary}</p>
           <StatBlock stats={study.outcome.stats} />
-          <p className="text-xs text-muted italic max-w-prose pt-4">
-            Replace brackets [X of Y] and [N] with real numbers from your alpha testing, or reword as "informal feedback from [N] users".
-          </p>
         </div>
       </SectionWrapper>
 

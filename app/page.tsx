@@ -87,9 +87,6 @@ export default function Home() {
             stats={caseStudies[0].outcome.stats}
             title="What testing showed"
           />
-          <p className="text-xs text-muted mt-8 italic">
-            Note: Replace brackets [X of Y] and [N] with real numbers from your alpha testing, or reword as "informal feedback from [N] users".
-          </p>
         </SectionWrapper>
       )}
 
