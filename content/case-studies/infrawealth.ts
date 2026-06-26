@@ -208,6 +208,6 @@ export const infrawealth: CaseStudy = {
     'Pairing a number with a visual gave more confidence than either one alone.',
     'Familiar fintech patterns cut the learning curve in a new domain.',
   ],
-  hero: '/case-studies/infrawealth/hero.png',
+  hero: '/case-studies/infrawealth/heroo.png',
   thumbnail: '/case-studies/infrawealth/thumbnail.png',
 }
