@@ -107,7 +107,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
       )}
 
       {/* Landscape */}
-      <SectionWrapper>
+      <SectionWrapper className="pt-0">
         <div className="max-w-prose space-y-4">
           <h2 className="font-display text-2xl font-semibold">The landscape</h2>
           <p className="text-lg leading-relaxed text-muted">{study.landscape}</p>
@@ -131,7 +131,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
       </SectionWrapper>
 
       {/* Journey map */}
-      <SectionWrapper>
+      <SectionWrapper className="pt-0">
         <div className="space-y-6">
           <h2 className="font-display text-2xl font-semibold">User journey map</h2>
           <JourneyMap journey={study.journey} />
