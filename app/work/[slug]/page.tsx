@@ -178,11 +178,12 @@ export default async function CaseStudyPage({ params }: PageProps) {
             </div>
             {/* iPhone 16 device frame, matching Figma's Present mode */}
             <div className="relative mx-auto" style={{ maxWidth: '320px' }}>
-              <div className="relative rounded-[2.75rem] p-[3px] border-2 border-white/70 shadow-[0_0_40px_rgba(255,255,255,0.08)]">
+              {/* Outer frame: white outline + uniform black bezel (the padding) */}
+              <div className="relative rounded-[2.75rem] p-2 border-2 border-white/70 bg-black shadow-[0_0_40px_rgba(255,255,255,0.08)]">
                 {/* Screen */}
-                <div className="relative w-full aspect-[9/19.5] rounded-[2.5rem] overflow-hidden bg-black">
+                <div className="relative w-full aspect-[9/19.5] rounded-[2.25rem] overflow-hidden bg-black">
                   <iframe
-                    src={`${study.prototype.figmaUrl.replace('www.figma.com/proto', 'embed.figma.com/proto')}&embed-host=share&hide-ui=1&hotspot-hints=0&scaling=contain&content-scaling=fixed`}
+                    src={`${study.prototype.figmaUrl.replace('www.figma.com/proto', 'embed.figma.com/proto')}&embed-host=share&hide-ui=1&hotspot-hints=0&scaling=scale-down-width`}
                     allowFullScreen
                     className="absolute inset-0 w-full h-full"
                   />
