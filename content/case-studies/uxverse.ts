@@ -209,8 +209,7 @@ export const uxverse: CaseStudy = {
     ],
   },
   prototype: {
-    // TODO: Archit, paste the real UXVerse Figma prototype link here
-    figmaUrl: 'https://www.figma.com/proto/PLACEHOLDER/UXVerse-Prototype',
+    figmaUrl: 'https://www.figma.com/proto/z7x0O3MYWl6aTXiSBjUqLv/UX-Verse?node-id=274-126&t=FEpfEaSbXOLmIjOl-1',
   },
   outcome: {
     summary:

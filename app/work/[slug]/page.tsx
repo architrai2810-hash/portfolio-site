@@ -176,24 +176,45 @@ export default async function CaseStudyPage({ params }: PageProps) {
                 Open in Figma
               </a>
             </div>
-            {/* iPhone 16 device frame, matching Figma's Present mode */}
-            <div className="relative mx-auto" style={{ maxWidth: '320px' }}>
-              {/* Outer frame: white outline + uniform black bezel (the padding) */}
-              <div className="relative rounded-[2.75rem] p-2 border-2 border-white/70 bg-black shadow-[0_0_40px_rgba(255,255,255,0.08)]">
-                {/* Screen */}
-                <div className="relative w-full aspect-[9/19.5] rounded-[2.25rem] overflow-hidden bg-black">
-                  <iframe
-                    src={`${study.prototype.figmaUrl.replace('www.figma.com/proto', 'embed.figma.com/proto')}&embed-host=share&hide-ui=1&hotspot-hints=0&scaling=scale-down-width`}
-                    allowFullScreen
-                    className="absolute inset-0 w-full h-full"
-                  />
-                  {/* Dynamic Island */}
-                  <div className="absolute top-2 left-1/2 -translate-x-1/2 w-20 h-5 bg-black rounded-full z-10" />
-                  {/* Home indicator */}
-                  <div className="absolute bottom-1.5 left-1/2 -translate-x-1/2 w-28 h-1 bg-white/60 rounded-full z-10" />
+            {/* Device frame: iPhone for mobile, MacBook for desktop */}
+            {study.screenOrientation === 'desktop' ? (
+              <div className="relative mx-auto" style={{ maxWidth: '900px' }}>
+                {/* MacBook frame: silver bezel with rounded corners */}
+                <div className="relative rounded-2xl p-3 bg-gradient-to-b from-slate-300 to-slate-400 shadow-[0_20px_60px_rgba(0,0,0,0.3)]">
+                  {/* Screen bezel (thin silver border inside) */}
+                  <div className="relative rounded-lg p-1 bg-gradient-to-b from-slate-200 to-slate-300">
+                    {/* Content area */}
+                    <div className="relative w-full rounded-md overflow-hidden bg-black" style={{ aspectRatio: '1440/1024' }}>
+                      <iframe
+                        src={`${study.prototype.figmaUrl.replace('www.figma.com/proto', 'embed.figma.com/proto')}&embed-host=share&hide-ui=1&hotspot-hints=0&scaling=scale-down-width`}
+                        allowFullScreen
+                        className="absolute inset-0 w-full h-full"
+                      />
+                    </div>
+                  </div>
+                  {/* MacBook bottom bezel/stand area */}
+                  <div className="relative h-6 bg-gradient-to-b from-slate-300 to-slate-400 rounded-b-2xl" />
                 </div>
               </div>
-            </div>
+            ) : (
+              <div className="relative mx-auto" style={{ maxWidth: '320px' }}>
+                {/* iPhone 16 device frame, matching Figma's Present mode */}
+                <div className="relative rounded-[2.75rem] p-2 border-2 border-white/70 bg-black shadow-[0_0_40px_rgba(255,255,255,0.08)]">
+                  {/* Screen */}
+                  <div className="relative w-full aspect-[9/19.5] rounded-[2.25rem] overflow-hidden bg-black">
+                    <iframe
+                      src={`${study.prototype.figmaUrl.replace('www.figma.com/proto', 'embed.figma.com/proto')}&embed-host=share&hide-ui=1&hotspot-hints=0&scaling=scale-down-width`}
+                      allowFullScreen
+                      className="absolute inset-0 w-full h-full"
+                    />
+                    {/* Dynamic Island */}
+                    <div className="absolute top-2 left-1/2 -translate-x-1/2 w-20 h-5 bg-black rounded-full z-10" />
+                    {/* Home indicator */}
+                    <div className="absolute bottom-1.5 left-1/2 -translate-x-1/2 w-28 h-1 bg-white/60 rounded-full z-10" />
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </SectionWrapper>
       )}
