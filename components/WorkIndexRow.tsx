@@ -1,7 +1,6 @@
 'use client'
 
 import Link from 'next/link'
-import Image from 'next/image'
 import type { CaseStudy } from '@/lib/types'
 import { useState } from 'react'
 
@@ -42,20 +41,8 @@ export default function WorkIndexRow({ study, index }: WorkIndexRowProps) {
           </div>
 
           {/* Outcome */}
-          <div className="col-span-12 sm:col-span-2 text-sm text-muted line-clamp-2">
+          <div className="col-span-12 sm:col-span-3 text-sm text-muted line-clamp-2">
             {study.outcome.summary.split('.')[0]}
-          </div>
-
-          {/* Thumbnail */}
-          <div className="col-span-12 sm:col-span-1 relative h-16 w-16 overflow-hidden rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            {study.thumbnail && (
-              <Image
-                src={study.thumbnail}
-                alt={study.title}
-                fill
-                className="object-cover group-hover:scale-110 transition-transform duration-300"
-              />
-            )}
           </div>
         </div>
       </div>
