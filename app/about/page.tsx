@@ -33,8 +33,8 @@ export default function AboutPage() {
 
       {/* Back link */}
       <SectionWrapper className="pt-24 sm:pt-28 pb-0">
-        <Link href="/" className="btn-text text-sm">
-          Back to home
+        <Link href="/" className="btn-text text-sm inline-flex items-center gap-2">
+          <span aria-hidden="true">&larr;</span> Back to home
         </Link>
       </SectionWrapper>
 

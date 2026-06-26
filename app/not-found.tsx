@@ -14,8 +14,8 @@ export default function NotFound() {
         <p className="text-muted text-lg max-w-prose mx-auto">
           The page you're looking for doesn't exist or has been moved.
         </p>
-        <Link href="/" className="btn-primary inline-block">
-          Back to home
+        <Link href="/" className="btn-primary inline-flex items-center gap-2">
+          <span aria-hidden="true">&larr;</span> Back to home
         </Link>
       </SectionWrapper>
 

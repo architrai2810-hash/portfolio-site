@@ -54,8 +54,8 @@ export default async function CaseStudyPage({ params }: PageProps) {
 
       {/* Back link */}
       <SectionWrapper className="pt-24 sm:pt-28 pb-0">
-        <Link href="/#work" className="btn-text text-sm">
-          Back to all work
+        <Link href="/#work" className="btn-text text-sm inline-flex items-center gap-2">
+          <span aria-hidden="true">&larr;</span> Back to all work
         </Link>
       </SectionWrapper>
 
@@ -231,12 +231,12 @@ export default async function CaseStudyPage({ params }: PageProps) {
       <SectionWrapper className="py-12">
         <div className="flex flex-col items-center justify-center gap-4">
           {nextStudy ? (
-            <Link href={`/work/${nextStudy.slug}`} className="btn-primary">
-              Next project: {nextStudy.title}
+            <Link href={`/work/${nextStudy.slug}`} className="btn-primary inline-flex items-center gap-2">
+              Next project: {nextStudy.title} <span aria-hidden="true">&rarr;</span>
             </Link>
           ) : (
-            <Link href="/#work" className="btn-primary">
-              Back to all work
+            <Link href="/#work" className="btn-primary inline-flex items-center gap-2">
+              <span aria-hidden="true">&larr;</span> Back to all work
             </Link>
           )}
         </div>
