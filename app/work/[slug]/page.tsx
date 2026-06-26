@@ -186,7 +186,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
                     {/* Black bezel */}
                     <div className="relative rounded-xl bg-black p-3">
                       {/* Camera notch */}
-                      <div className="absolute top-1.5 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-zinc-800 ring-1 ring-white/10 z-10" />
+                      <div className="absolute top-1.5 left-1/2 -translate-x-1/2 w-2.5 h-2.5 rounded-full bg-zinc-900 ring-1 ring-white/20 z-10" />
                       {/* Content area */}
                       <div className="relative w-full rounded-sm overflow-hidden bg-black" style={{ aspectRatio: '1440/1024' }}>
                         <iframe
