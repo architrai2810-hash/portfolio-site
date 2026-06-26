@@ -71,7 +71,7 @@ export default function Home() {
       {/* Selected work */}
       <SectionWrapper id="work">
         <div className="space-y-8">
-          <h2 className="font-display text-3xl font-semibold">Selected work</h2>
+          <h2 className="font-display text-3xl font-semibold">Selected Work</h2>
           <div className="space-y-1">
             {caseStudies.map((study, idx) => (
               <WorkIndexRow key={study.slug} study={study} index={idx} />

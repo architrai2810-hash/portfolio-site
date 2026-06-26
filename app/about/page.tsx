@@ -50,7 +50,7 @@ export default function AboutPage() {
       <SectionWrapper className="pt-0">
         <div className="max-w-prose space-y-8 text-lg leading-relaxed text-muted">
           <div className="space-y-4">
-            <h2 className="font-display text-2xl font-semibold text-ink">The background</h2>
+            <h2 className="font-display text-2xl font-semibold text-ink">The Background</h2>
             <p>
               My focus is UI/UX and product design — research-led flows, clean visual systems, and interfaces that hold up under real use. I'm completing my B.Des in Product Experience Design at the National Institute of Fashion Technology, expected in 2026, where the program taught me to think like a researcher before a designer. Before that, I freelanced as a graphic designer and video editor, and spent time with CAD and 3D modeling, work that sharpened how I think spatially and solve for constraints.
             </p>
@@ -60,7 +60,7 @@ export default function AboutPage() {
           </div>
 
           <div className="space-y-4">
-            <h2 className="font-display text-2xl font-semibold text-ink">What I care about</h2>
+            <h2 className="font-display text-2xl font-semibold text-ink">What I Care About</h2>
             <p>
               I'm drawn to problems that feel like puzzles: how do you make the complex feel simple. I love fintech and SaaS because they sit at that edge. A good dashboard doesn't need to be beautiful, it needs to answer the question your user came with, in the time it takes to glance. I'm skeptical of cleverness for its own sake. I believe in asking hard questions before I design, and I believe in testing with real users.
             </p>
@@ -74,7 +74,7 @@ export default function AboutPage() {
           </div>
 
           <div className="space-y-4">
-            <h2 className="font-display text-2xl font-semibold text-ink">What's next</h2>
+            <h2 className="font-display text-2xl font-semibold text-ink">What's Next</h2>
             <p>
               I'm open to UI-UX and Product Designer roles, ideally where I can do end-to-end design: research, flows, high-fidelity UI, and work with developers who care about quality. I'm most interested in fintech, real estate tech, and tools.
             </p>
@@ -102,7 +102,7 @@ export default function AboutPage() {
       {/* Contact section */}
       <SectionWrapper id="contact" className="space-y-8">
         <div className="space-y-6">
-          <h2 className="font-display text-2xl font-semibold">Let's talk</h2>
+          <h2 className="font-display text-2xl font-semibold">Let's Talk</h2>
           <p className="text-base text-muted max-w-prose">
             If you're hiring, interested in my work, or want to chat about design, feel free to reach out. I read every message.
           </p>

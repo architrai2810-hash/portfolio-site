@@ -69,19 +69,19 @@ export default async function CaseStudyPage({ params }: PageProps) {
         {/* Meta row */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-4 border-t border-line">
           <div>
-            <div className="font-mono text-xs font-semibold text-muted tracking-wider mb-2">
+            <div className="font-mono text-xs font-semibold text-muted uppercase tracking-wider mb-2">
               Role
             </div>
             <p className="text-base">{study.facts.role}</p>
           </div>
           <div>
-            <div className="font-mono text-xs font-semibold text-muted tracking-wider mb-2">
+            <div className="font-mono text-xs font-semibold text-muted uppercase tracking-wider mb-2">
               Timeline
             </div>
             <p className="text-base">{study.facts.timeline}</p>
           </div>
           <div>
-            <div className="font-mono text-xs font-semibold text-muted tracking-wider mb-2">
+            <div className="font-mono text-xs font-semibold text-muted uppercase tracking-wider mb-2">
               Approach
             </div>
             <p className="text-base text-sm">{study.facts.approach}</p>
@@ -109,7 +109,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
       {/* Landscape */}
       <SectionWrapper className="pt-0">
         <div className="max-w-prose space-y-4">
-          <h2 className="font-display text-2xl font-semibold">The landscape</h2>
+          <h2 className="font-display text-2xl font-semibold">The Landscape</h2>
           <p className="text-lg leading-relaxed text-muted">{study.landscape}</p>
         </div>
       </SectionWrapper>
@@ -117,7 +117,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
       {/* Problem */}
       <SectionWrapper className="bg-surface border-y border-line">
         <div className="max-w-prose space-y-4">
-          <h2 className="font-display text-2xl font-semibold">The problem</h2>
+          <h2 className="font-display text-2xl font-semibold">The Problem</h2>
           <p className="text-lg font-semibold leading-relaxed text-accent">{study.problem}</p>
         </div>
       </SectionWrapper>
@@ -133,7 +133,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
       {/* Journey map */}
       <SectionWrapper className="pt-0">
         <div className="space-y-6">
-          <h2 className="font-display text-2xl font-semibold">User journey map</h2>
+          <h2 className="font-display text-2xl font-semibold">User Journey Map</h2>
           <JourneyMap journey={study.journey} />
         </div>
       </SectionWrapper>
@@ -156,7 +156,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
       {/* Flow sequence */}
       <SectionWrapper>
         <div className="space-y-6">
-          <h2 className="font-display text-2xl font-semibold">User flow and solution</h2>
+          <h2 className="font-display text-2xl font-semibold">User Flow And Solution</h2>
           <FlowSequence flow={study.flow} />
         </div>
       </SectionWrapper>
