@@ -178,25 +178,31 @@ export default async function CaseStudyPage({ params }: PageProps) {
             </div>
             {/* Device frame: iPhone for mobile, MacBook for desktop */}
             {study.screenOrientation === 'desktop' ? (
-              <div className="relative mx-auto" style={{ maxWidth: '900px' }}>
-                {/* MacBook screen: thin black bezel, equal on all sides, with camera notch */}
-                <div className="relative rounded-2xl border border-white/10 bg-black p-2.5 shadow-[0_30px_70px_rgba(0,0,0,0.5)]">
-                  {/* Camera notch */}
-                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-16 h-2.5 bg-black rounded-b-md z-10" />
-                  {/* Content area */}
-                  <div className="relative w-full rounded-sm overflow-hidden bg-black" style={{ aspectRatio: '1440/1024' }}>
-                    <iframe
-                      src={`${study.prototype.figmaUrl.replace('www.figma.com/proto', 'embed.figma.com/proto')}&embed-host=share&hide-ui=1&hotspot-hints=0&scaling=scale-down-width`}
-                      allowFullScreen
-                      className="absolute inset-0 w-full h-full"
-                    />
+              <div className="relative mx-auto" style={{ maxWidth: '950px' }}>
+                {/* Lid: aluminum edge + black bezel, narrower than the base so the base reads as wider */}
+                <div className="relative mx-auto" style={{ width: '93%' }}>
+                  {/* Aluminum edge frame, visibly thicker than the black bezel inside it */}
+                  <div className="relative rounded-2xl p-1.5 bg-gradient-to-b from-gray-300 via-gray-400 to-gray-500 shadow-[0_30px_70px_rgba(0,0,0,0.5)]">
+                    {/* Black bezel */}
+                    <div className="relative rounded-xl bg-black p-3">
+                      {/* Camera notch */}
+                      <div className="absolute top-1.5 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-zinc-800 ring-1 ring-white/10 z-10" />
+                      {/* Content area */}
+                      <div className="relative w-full rounded-sm overflow-hidden bg-black" style={{ aspectRatio: '1440/1024' }}>
+                        <iframe
+                          src={`${study.prototype.figmaUrl.replace('www.figma.com/proto', 'embed.figma.com/proto')}&embed-host=share&hide-ui=1&hotspot-hints=0&scaling=scale-down-width`}
+                          allowFullScreen
+                          className="absolute inset-0 w-full h-full"
+                        />
+                      </div>
+                    </div>
                   </div>
                 </div>
                 {/* Hinge */}
-                <div className="h-1.5 bg-gradient-to-b from-zinc-800 to-zinc-700" />
-                {/* MacBook base / keyboard deck */}
-                <div className="relative h-4 rounded-b-xl bg-gradient-to-b from-gray-200 via-gray-300 to-gray-400 shadow-[0_8px_20px_rgba(0,0,0,0.25)]">
-                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-1 rounded-b bg-gray-400/60" />
+                <div className="mx-auto h-2 bg-gradient-to-b from-zinc-700 to-zinc-600" style={{ width: '93%' }} />
+                {/* MacBook base / keyboard deck: thicker and wider than the screen */}
+                <div className="relative h-9 rounded-b-[1.25rem] bg-gradient-to-b from-gray-200 via-gray-300 to-gray-400 shadow-[0_12px_30px_rgba(0,0,0,0.3)]">
+                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-28 h-1.5 rounded-b bg-gray-400/70" />
                 </div>
               </div>
             ) : (
