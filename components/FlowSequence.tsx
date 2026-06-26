@@ -11,6 +11,8 @@ export default function FlowSequence({ flow, screenOrientation = 'mobile' }: Flo
   const isMobile = screenOrientation === 'mobile'
   const aspectRatio = isMobile ? 'aspect-[9/19.5]' : 'aspect-video'
 
+  const gridClass = isMobile ? 'lg:grid-cols-4' : 'lg:grid-cols-2'
+
   return (
     <div className="space-y-8">
       {/* Note */}
@@ -19,7 +21,7 @@ export default function FlowSequence({ flow, screenOrientation = 'mobile' }: Flo
       </div>
 
       {/* Flow Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className={`grid grid-cols-1 sm:grid-cols-2 ${gridClass} gap-6`}>
         {steps.map((step, idx) => (
           <div key={step.n} className="space-y-4">
             {/* Step number and name */}
@@ -72,14 +74,23 @@ export default function FlowSequence({ flow, screenOrientation = 'mobile' }: Flo
       </div>
 
       {/* Connection visual on larger screens */}
-      <div className="hidden lg:block relative h-16 my-8">
-        <svg className="w-full h-full" preserveAspectRatio="none">
-          <line x1="12.5%" y1="0" x2="12.5%" y2="100%" stroke="#E3E6EB" strokeWidth="2" />
-          <line x1="37.5%" y1="0" x2="37.5%" y2="100%" stroke="#E3E6EB" strokeWidth="2" />
-          <line x1="62.5%" y1="0" x2="62.5%" y2="100%" stroke="#E3E6EB" strokeWidth="2" />
-          <line x1="87.5%" y1="0" x2="87.5%" y2="100%" stroke="#E3E6EB" strokeWidth="2" />
-        </svg>
-      </div>
+      {isMobile ? (
+        <div className="hidden lg:block relative h-16 my-8">
+          <svg className="w-full h-full" preserveAspectRatio="none">
+            <line x1="12.5%" y1="0" x2="12.5%" y2="100%" stroke="#E3E6EB" strokeWidth="2" />
+            <line x1="37.5%" y1="0" x2="37.5%" y2="100%" stroke="#E3E6EB" strokeWidth="2" />
+            <line x1="62.5%" y1="0" x2="62.5%" y2="100%" stroke="#E3E6EB" strokeWidth="2" />
+            <line x1="87.5%" y1="0" x2="87.5%" y2="100%" stroke="#E3E6EB" strokeWidth="2" />
+          </svg>
+        </div>
+      ) : (
+        <div className="hidden lg:block relative h-16 my-8">
+          <svg className="w-full h-full" preserveAspectRatio="none">
+            <line x1="25%" y1="0" x2="25%" y2="100%" stroke="#E3E6EB" strokeWidth="2" />
+            <line x1="75%" y1="0" x2="75%" y2="100%" stroke="#E3E6EB" strokeWidth="2" />
+          </svg>
+        </div>
+      )}
     </div>
   )
 }
