@@ -181,8 +181,6 @@ export default async function CaseStudyPage({ params }: PageProps) {
               <div className="relative mx-auto" style={{ maxWidth: '950px' }}>
                 {/* Lid: aluminum edge + black bezel, narrower than the base so the base reads as wider */}
                 <div className="relative mx-auto" style={{ width: '93%' }}>
-                  {/* Camera notch strip, straddling the top edge of the bezel */}
-                  <div className="absolute -top-1.5 left-1/2 -translate-x-1/2 w-24 h-3 bg-black rounded-md z-20" />
                   {/* Aluminum edge frame, visibly thicker than the black bezel inside it */}
                   <div className="relative rounded-2xl p-1.5 bg-gradient-to-b from-gray-300 via-gray-400 to-gray-500 shadow-[0_30px_70px_rgba(0,0,0,0.5)]">
                     {/* Black bezel */}
@@ -194,6 +192,8 @@ export default async function CaseStudyPage({ params }: PageProps) {
                           allowFullScreen
                           className="absolute inset-0 w-full h-full"
                         />
+                        {/* Camera notch strip, sitting inside the frame atop the UI */}
+                        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-3 bg-black rounded-b-md z-20" />
                       </div>
                     </div>
                   </div>
