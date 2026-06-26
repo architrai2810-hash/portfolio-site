@@ -185,7 +185,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
                     src={`${study.prototype.figmaUrl.replace('www.figma.com/proto', 'embed.figma.com/proto')}&embed-host=share&hide-ui=1&hotspot-hints=0&scaling=contain&content-scaling=fixed`}
                     allowFullScreen
                     className="absolute inset-0 w-full h-full origin-center"
-                    style={{ transform: 'scale(1.32)' }}
+                    style={{ transform: 'scale(1.42)' }}
                   />
                   {/* Dynamic Island */}
                   <div className="absolute top-2 left-1/2 -translate-x-1/2 w-20 h-5 bg-black rounded-full z-10" />
