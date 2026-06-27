@@ -343,22 +343,6 @@ async function ShowcasePage({
           </div>
         </div>
 
-        {/* Links */}
-        {study.links && study.links.length > 0 && (
-          <div className="flex flex-wrap gap-4 pt-4">
-            {study.links.map((link: any, idx: number) => (
-              <a
-                key={idx}
-                href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary"
-              >
-                {link.label}
-              </a>
-            ))}
-          </div>
-        )}
       </SectionWrapper>
 
       {/* Hero image */}
@@ -382,6 +366,7 @@ async function ShowcasePage({
       {study.overview && (
         <SectionWrapper>
           <div className="max-w-prose space-y-4">
+            <h2 className="font-display text-2xl font-semibold">The Challenge</h2>
             <p className="text-lg leading-relaxed text-muted">{study.overview}</p>
           </div>
         </SectionWrapper>
@@ -390,31 +375,18 @@ async function ShowcasePage({
       {/* Where it began */}
       {study.startingPoint && (
         <SectionWrapper className="bg-surface border-y border-line">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-12">
-            <div className="max-w-prose space-y-6">
-              <h2 className="font-display text-2xl font-semibold">Where it began</h2>
-              <p className="text-base font-semibold text-accent">{study.startingPoint.intro}</p>
-              <ul className="space-y-3">
-                {study.startingPoint.problems.map((problem: string, idx: number) => (
-                  <li key={idx} className="flex gap-3 text-sm text-muted leading-relaxed">
-                    <span className="font-semibold text-accent flex-shrink-0">{idx + 1}.</span>
-                    <span>{problem}</span>
-                  </li>
-                ))}
-              </ul>
-              <p className="text-base text-muted leading-relaxed">{study.startingPoint.close}</p>
-            </div>
-            {/* Before image */}
-            <div className="rounded-lg overflow-hidden border border-line bg-paper">
-              <Image
-                src="/case-studies/weupdaters/before-original.png"
-                alt="Original design"
-                width={1200}
-                height={900}
-                className="w-full h-auto"
-                quality={95}
-              />
-            </div>
+          <div className="max-w-prose space-y-6">
+            <h2 className="font-display text-2xl font-semibold">Where It Began</h2>
+            <p className="text-base font-semibold text-accent">{study.startingPoint.intro}</p>
+            <ul className="space-y-3">
+              {study.startingPoint.problems.map((problem: string, idx: number) => (
+                <li key={idx} className="flex gap-3 text-sm text-muted leading-relaxed">
+                  <span className="font-semibold text-accent flex-shrink-0">{idx + 1}.</span>
+                  <span>{problem}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="text-base text-muted leading-relaxed">{study.startingPoint.close}</p>
           </div>
         </SectionWrapper>
       )}
@@ -424,7 +396,7 @@ async function ShowcasePage({
         <SectionWrapper>
           <div className="space-y-12">
             <div className="space-y-4">
-              <h2 className="font-display text-2xl font-semibold">Exploration and iterations</h2>
+              <h2 className="font-display text-2xl font-semibold">Exploration And Iterations</h2>
               <p className="text-base text-muted max-w-prose leading-relaxed">{study.iterations.intro}</p>
             </div>
 
@@ -458,11 +430,6 @@ async function ShowcasePage({
                             </span>
                             <h3 className="text-xl font-display font-semibold">{step.title}</h3>
                           </div>
-                          {step.resolved && (
-                            <div className="inline-block px-2 py-1 text-xs font-mono font-semibold text-accent bg-accent/10 rounded">
-                              Resolved
-                            </div>
-                          )}
                         </div>
                         <p className="text-base text-muted leading-relaxed">{step.body}</p>
                       </div>
@@ -484,10 +451,22 @@ async function ShowcasePage({
       {study.designDirection && (
         <div className="bg-black text-white">
           <SectionWrapper className="py-16">
-            <div className="space-y-12">
-              <div className="max-w-prose space-y-6">
-                <h2 className="font-display text-2xl font-semibold text-white">Where it landed</h2>
-                <p className="text-lg leading-relaxed text-gray-300">{study.designDirection}</p>
+            <div className="space-y-8">
+              <div className="space-y-8">
+                <div className="space-y-4">
+                  <h2 className="font-display text-2xl font-semibold text-white">Where It Landed</h2>
+                  <p className="text-lg leading-relaxed text-gray-300 max-w-prose">{study.designDirection}</p>
+                </div>
+                {study.prototype?.figmaUrl && (
+                  <a
+                    href={study.prototype.figmaUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-primary inline-block"
+                  >
+                    Open in Figma
+                  </a>
+                )}
               </div>
 
               {/* MacBook prototype frame */}
@@ -529,7 +508,7 @@ async function ShowcasePage({
       {study.highlights && study.highlights.length > 0 && (
         <SectionWrapper className="bg-surface border-y border-line">
           <div className="space-y-6">
-            <h2 className="font-display text-2xl font-semibold">What changed</h2>
+            <h2 className="font-display text-2xl font-semibold">What Changed</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {study.highlights.map((highlight: any, idx: number) => (
                 <div key={idx} className="space-y-3">
@@ -542,16 +521,16 @@ async function ShowcasePage({
         </SectionWrapper>
       )}
 
-      {/* Principles */}
+      {/* Principles - styled like The Takeaway */}
       {study.principles && study.principles.length > 0 && (
         <SectionWrapper>
           <div className="space-y-6">
-            <h2 className="font-display text-2xl font-semibold">What guided it</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            <h2 className="font-display text-2xl font-semibold">What Guided It</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
               {study.principles.map((principle: any, idx: number) => (
-                <div key={idx} className="space-y-3">
-                  <h3 className="text-base font-semibold">{principle.title}</h3>
-                  <p className="text-sm text-muted leading-relaxed">{principle.description}</p>
+                <div key={idx} className="space-y-2">
+                  <div className="font-semibold text-base">{principle.title}</div>
+                  <p className="text-muted leading-relaxed text-sm">{principle.description}</p>
                 </div>
               ))}
             </div>
@@ -563,7 +542,7 @@ async function ShowcasePage({
       {study.result && (
         <SectionWrapper>
           <div className="space-y-6">
-            <h2 className="font-display text-2xl font-semibold">Result</h2>
+            <h2 className="font-display text-2xl font-semibold">The Result</h2>
             <p className="text-base text-muted max-w-prose leading-relaxed">{study.result}</p>
           </div>
         </SectionWrapper>
