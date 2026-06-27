@@ -33,11 +33,9 @@ export default function WorkIndexRow({ study, index }: WorkIndexRowProps) {
               <h3 className="text-lg sm:text-xl font-display font-semibold group-hover:text-accent transition-colors">
                 {study.title}
               </h3>
-              {study.format === 'showcase' && (
-                <span className="inline-block px-2 py-1 text-xs font-mono font-semibold text-accent bg-accent/10 rounded">
-                  Visual showcase
-                </span>
-              )}
+              <span className="inline-block px-2 py-1 text-xs font-mono font-semibold text-accent bg-accent/10 rounded">
+                {study.format === 'showcase' ? 'Visual Showcase' : 'Case Study'}
+              </span>
             </div>
           </div>
 
