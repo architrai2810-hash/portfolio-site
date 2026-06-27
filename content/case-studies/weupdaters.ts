@@ -46,32 +46,32 @@ export const weupdaters: CaseStudy = {
       'The final layout was the last in a series of explorations. Each one tested a different answer to the same question: how does this page look modern and capable while staying easy to read and act on.',
     steps: [
       {
-        title: 'Warm wash, coil centrepiece',
+        title: 'Warm Wash, Coil Centrepiece',
         body: 'A dark olive-gold background with a blue 3D coil as the hero. It set the left-aligned hero and the "Crafting Digital Solutions" headline, but the low-contrast type made the message hard to read.',
         image: '/case-studies/weupdaters/iteration-01.png',
       },
       {
-        title: 'Centered and informative',
+        title: 'Centered And Informative',
         body: 'A symmetrical layout over a circuit-globe visual, with a new headline and a three-step process band. More informative, but the centering and extra copy pulled focus away from the message.',
         image: '/case-studies/weupdaters/iteration-02.png',
       },
       {
-        title: 'Bold 3D, hidden nav',
+        title: 'Bold 3D, Hidden Nav',
         body: 'A striking orange AI-chip centrepiece with a vertical portfolio rail. Visually strong, but the headline sat low over a busy image and lost legibility, and the navigation collapsed into a hamburger.',
         image: '/case-studies/weupdaters/iteration-03.png',
       },
       {
-        title: 'Asymmetric rebalance',
+        title: 'Asymmetric Rebalance',
         body: 'An image-left, text-right split that felt calmer and clearer, with the portfolio simplified into a horizontal strip.',
         image: '/case-studies/weupdaters/iteration-04.png',
       },
       {
-        title: 'Structured grid',
+        title: 'Structured Grid',
         body: 'A divided navigation bar and an editorial grid. High-contrast, left-aligned type finally made the headline read at a glance, and small detailing added polish.',
         image: '/case-studies/weupdaters/iteration-05.png',
       },
       {
-        title: 'The resolved direction',
+        title: 'The Resolved Direction',
         body: 'The grid and divided navigation from the fifth iteration, paired with the original "Crafting Digital Solutions" headline at full contrast and the strongest 3D centrepiece.',
         image: '/case-studies/weupdaters/iteration-06.png',
         resolved: true,

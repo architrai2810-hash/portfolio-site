@@ -318,7 +318,7 @@ async function ShowcasePage({
         <div className="space-y-4">
           <h1 className="font-display text-4xl sm:text-5xl font-semibold">{study.title}</h1>
           <p className="text-xl text-muted max-w-prose">{study.subtitle}</p>
-          {study.dek && <p className="text-lg text-muted max-w-prose font-semibold">{study.dek}</p>}
+          {study.dek && <p className="text-lg text-muted max-w-prose">{study.dek}</p>}
         </div>
 
         {/* Meta row */}
@@ -526,11 +526,11 @@ async function ShowcasePage({
         <SectionWrapper>
           <div className="space-y-6">
             <h2 className="font-display text-2xl font-semibold">What Guided It</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
               {study.principles.map((principle: any, idx: number) => (
-                <div key={idx} className="space-y-2">
-                  <div className="font-semibold text-base">{principle.title}</div>
-                  <p className="text-muted leading-relaxed text-sm">{principle.description}</p>
+                <div key={idx} className="space-y-3">
+                  <div className="font-mono text-4xl font-bold text-accent">{principle.title}</div>
+                  <p className="text-sm text-muted leading-relaxed">{principle.description}</p>
                 </div>
               ))}
             </div>
