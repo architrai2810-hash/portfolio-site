@@ -37,7 +37,7 @@ export default function SectionProgress({ sectionCount }: SectionProgressProps) 
       {Array.from({ length: sectionCount }).map((_, index) => (
         <div
           key={index}
-          className={`transition-all duration-300 h-0.5 ${
+          className={`transition-all duration-300 h-[3px] ${
             index === activeSection ? 'bg-accent w-8' : 'bg-line w-4'
           }`}
         />
