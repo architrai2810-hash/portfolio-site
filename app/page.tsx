@@ -2,9 +2,8 @@ import Nav from '@/components/Nav'
 import Footer from '@/components/Footer'
 import SectionWrapper from '@/components/SectionWrapper'
 import WorkIndexRow from '@/components/WorkIndexRow'
-import StatBlock from '@/components/StatBlock'
+import TypographicHero from '@/components/TypographicHero'
 import { caseStudies } from '@/lib/case-studies'
-import Image from 'next/image'
 
 export default function Home() {
   return (
@@ -12,38 +11,8 @@ export default function Home() {
       <Nav />
 
       {/* Hero */}
-      <SectionWrapper className="pt-28 sm:pt-32">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
-            <div className="eyebrow">Product / UX/UI Designer</div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-semibold leading-tight">
-              I design clear, usable interfaces for complex products.
-            </h1>
-            <p className="text-lg text-muted max-w-prose leading-relaxed">
-              I'm a product designer focused on UX/UI, completing my B.Des in Product Experience Design at the National Institute of Fashion Technology.
-            </p>
-            <div className="flex gap-4 pt-4">
-              <a href="#work" className="btn-primary">
-                View work
-              </a>
-              <a
-                href="https://behance.net/architrai"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-secondary"
-              >
-                Behance
-              </a>
-            </div>
-          </div>
-
-          {/* Hero visual placeholder */}
-          <div className="relative aspect-square lg:aspect-auto lg:h-96 rounded-lg overflow-hidden border border-line bg-paper">
-            <div className="w-full h-full flex items-center justify-center">
-              <span className="text-muted">Hero visual</span>
-            </div>
-          </div>
-        </div>
+      <SectionWrapper className="pt-28 sm:pt-32 pb-0">
+        <TypographicHero />
       </SectionWrapper>
 
       {/* Trust strip */}
