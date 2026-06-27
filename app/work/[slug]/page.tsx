@@ -228,10 +228,10 @@ export default async function CaseStudyPage({ params }: PageProps) {
         </SectionWrapper>
       )}
 
-      {/* Outcome */}
+      {/* The Takeaway */}
       <SectionWrapper>
         <div className="space-y-6">
-          <h2 className="font-display text-2xl font-semibold">Outcome</h2>
+          <h2 className="font-display text-2xl font-semibold">The Takeaway</h2>
           <p className="text-base text-muted max-w-prose leading-relaxed">{study.outcome.summary}</p>
           <StatBlock stats={study.outcome.stats} />
         </div>

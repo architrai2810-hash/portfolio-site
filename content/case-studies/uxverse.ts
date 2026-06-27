@@ -212,16 +212,15 @@ export const uxverse: CaseStudy = {
     figmaUrl: 'https://www.figma.com/proto/z7x0O3MYWl6aTXiSBjUqLv/UX-Verse?node-id=274-126&t=FEpfEaSbXOLmIjOl-1',
   },
   outcome: {
-    summary:
-      'UXVerse did not go through a testing round, so these are the goals the flow was built to meet rather than measured results.',
+    summary: 'Every element of the flow is built around these two core principles.',
     stats: [
       {
         value: 'Clarity',
         label: 'A visitor can tell what UXVerse is, who it\'s for and why it matters from the first screen.',
       },
       {
-        value: 'Lower drop-off',
-        label: 'A three-field form and instant confirmation cut the friction that usually ends registration.',
+        value: 'Credibility',
+        label: 'Real speakers, partners, and past events prove the event\'s worth—removing doubt before commitment.',
       },
     ],
   },
