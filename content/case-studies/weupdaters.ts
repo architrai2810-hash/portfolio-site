@@ -106,12 +106,8 @@ export const weupdaters: CaseStudy = {
       description: 'organise information so the page is easy to scan.',
     },
     {
-      title: 'Visual identity',
-      description: 'a modern, credible look that earns trust on sight.',
-    },
-    {
-      title: 'Conversion focus',
-      description: 'point every section toward a clear next step.',
+      title: 'Credibility',
+      description: 'a modern, trustworthy look that earns confidence at first glance.',
     },
   ],
   result:

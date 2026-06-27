@@ -589,7 +589,7 @@ async function ShowcasePage({
           <SectionWrapper>
           <div className="space-y-6">
             <h2 className="font-display text-2xl font-semibold">What Guided It</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {study.principles.map((principle: any, idx: number) => (
                 <div key={idx} className="space-y-3">
                   <div className="font-mono text-4xl font-bold text-accent">{principle.title}</div>
