@@ -17,14 +17,17 @@ export const weupdaters: CaseStudy = {
     approach: 'Figma, Blender',
   },
   dek: 'A focused redesign that gives a digital-services company the clarity, credibility and modern feel its landing page was missing.',
+  prototype: {
+    figmaUrl: 'https://www.figma.com/proto/dBIvyKne2RzQeIoKfKoGni/WeUpdaters?node-id=293-366&t=YL9hGq3ZH5nEjETr-1',
+  },
   links: [
     {
       label: 'Live preview',
-      href: 'https://placeholder.com/live-preview',
+      href: 'https://weupdaters.com',
     },
     {
       label: 'Figma file',
-      href: 'https://www.figma.com/file/placeholder',
+      href: 'https://www.figma.com/file/dBIvyKne2RzQeIoKfKoGni/WeUpdaters',
     },
   ],
   overview:

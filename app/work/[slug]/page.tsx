@@ -484,22 +484,42 @@ async function ShowcasePage({
       {study.designDirection && (
         <div className="bg-black text-white">
           <SectionWrapper className="py-16">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 items-center">
+            <div className="space-y-12">
               <div className="max-w-prose space-y-6">
                 <h2 className="font-display text-2xl font-semibold text-white">Where it landed</h2>
                 <p className="text-lg leading-relaxed text-gray-300">{study.designDirection}</p>
               </div>
-              {/* Centrepiece image */}
-              <div className="rounded-lg overflow-hidden border border-gray-700 bg-gray-900">
-                <Image
-                  src="/case-studies/weupdaters/centrepiece-3d.png"
-                  alt="Final design centrepiece"
-                  width={1200}
-                  height={900}
-                  className="w-full h-auto"
-                  quality={95}
-                />
-              </div>
+
+              {/* MacBook prototype frame */}
+              {study.prototype?.figmaUrl && (
+                <div className="relative mx-auto" style={{ maxWidth: '950px' }}>
+                  {/* Lid: aluminum edge + black bezel */}
+                  <div className="relative mx-auto" style={{ width: '93%' }}>
+                    {/* Aluminum edge frame */}
+                    <div className="relative rounded-2xl p-1.5 bg-gradient-to-b from-gray-300 via-gray-400 to-gray-500 shadow-[0_30px_70px_rgba(0,0,0,0.5)]">
+                      {/* Black bezel */}
+                      <div className="relative rounded-xl bg-black p-3">
+                        {/* Content area */}
+                        <div className="relative w-full rounded-sm overflow-hidden bg-black" style={{ aspectRatio: '1440/1024' }}>
+                          <iframe
+                            src={`${study.prototype.figmaUrl.replace('www.figma.com/proto', 'embed.figma.com/proto')}&embed-host=share&hide-ui=1&hotspot-hints=0&scaling=scale-down-width`}
+                            allowFullScreen
+                            className="absolute inset-0 w-full h-full"
+                          />
+                          {/* Camera notch strip */}
+                          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-3 bg-black rounded-b-md z-20" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  {/* Hinge */}
+                  <div className="mx-auto h-2 bg-gradient-to-b from-zinc-700 to-zinc-600" style={{ width: '93%' }} />
+                  {/* MacBook base / keyboard deck */}
+                  <div className="relative h-9 rounded-b-[1.25rem] bg-gradient-to-b from-gray-200 via-gray-300 to-gray-400 shadow-[0_12px_30px_rgba(0,0,0,0.3)]">
+                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-28 h-1.5 rounded-b bg-gray-400/70" />
+                  </div>
+                </div>
+              )}
             </div>
           </SectionWrapper>
         </div>
