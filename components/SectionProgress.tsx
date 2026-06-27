@@ -33,13 +33,13 @@ export default function SectionProgress({ sectionCount }: SectionProgressProps) 
   }, [])
 
   return (
-    <div className="fixed right-8 top-1/2 -translate-y-1/2 flex flex-col gap-3 z-30">
+    <div className="fixed right-8 top-1/2 -translate-y-1/2 flex flex-col gap-2 z-30">
       {Array.from({ length: sectionCount }).map((_, index) => (
         <div
           key={index}
-          className={`transition-all duration-300 h-1 bg-accent ${
-            index === activeSection ? 'w-8' : 'w-4'
-          } ${index <= activeSection ? 'opacity-100' : 'opacity-40'}`}
+          className={`transition-all duration-300 h-0.5 ${
+            index === activeSection ? 'bg-accent w-8' : 'bg-line w-4'
+          }`}
         />
       ))}
     </div>
