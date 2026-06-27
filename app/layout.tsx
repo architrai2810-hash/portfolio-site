@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import ScrollToTop from '@/components/ScrollToTop'
 
 export const metadata: Metadata = {
   title: 'Archit Rai - Product & UI-UX Designer',
@@ -29,7 +30,10 @@ export default function RootLayout({
         />
         <link href="https://api.fontshare.com/css?f[]=general-sans@400,500,600,700&display=swap" rel="stylesheet" />
       </head>
-      <body className="bg-paper text-ink font-body">{children}</body>
+      <body className="bg-paper text-ink font-body">
+        {children}
+        <ScrollToTop />
+      </body>
     </html>
   )
 }
