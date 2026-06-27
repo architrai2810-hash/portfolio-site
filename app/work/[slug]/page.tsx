@@ -5,6 +5,7 @@ import PersonaCard from '@/components/PersonaCard'
 import JourneyMap from '@/components/JourneyMap'
 import FlowSequence from '@/components/FlowSequence'
 import StatBlock from '@/components/StatBlock'
+import SectionProgress from '@/components/SectionProgress'
 import { getCaseStudyBySlug, getAllCaseStudySlugs, caseStudies } from '@/lib/case-studies'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -53,9 +54,24 @@ export default async function CaseStudyPage({ params }: PageProps) {
     return <ShowcasePage study={study} currentIndex={currentIndex} nextStudy={nextStudy} />
   }
 
+  // Count sections for progress indicator
+  const sectionCount = [
+    study.hero,
+    study.landscape,
+    study.problem,
+    study.persona,
+    study.journey,
+    study.insights,
+    study.flow,
+    study.prototype,
+    study.outcome,
+    study.learnings,
+  ].filter(Boolean).length
+
   return (
     <div className="min-h-screen bg-paper">
       <Nav />
+      <SectionProgress sectionCount={sectionCount} />
 
       {/* Back link */}
       <SectionWrapper className="pt-24 sm:pt-28 pb-0">
@@ -96,103 +112,118 @@ export default async function CaseStudyPage({ params }: PageProps) {
 
       {/* Hero image */}
       {study.hero && (
-        <SectionWrapper className="pt-0">
-          <div className="relative w-full rounded-lg overflow-hidden border border-line bg-surface">
-            <Image
-              src={study.hero}
-              alt={study.title}
-              width={1200}
-              height={800}
-              className="w-full h-auto"
-              priority
-              quality={95}
-            />
-          </div>
-        </SectionWrapper>
+        <section data-section>
+          <SectionWrapper className="pt-0">
+            <div className="relative w-full rounded-lg overflow-hidden border border-line bg-surface">
+              <Image
+                src={study.hero}
+                alt={study.title}
+                width={1200}
+                height={800}
+                className="w-full h-auto"
+                priority
+                quality={95}
+              />
+            </div>
+          </SectionWrapper>
+        </section>
       )}
 
       {/* Landscape */}
       {study.landscape && (
-        <SectionWrapper className="pt-0">
-          <div className="max-w-prose space-y-4">
-            <h2 className="font-display text-2xl font-semibold">The Landscape</h2>
-            <p className="text-lg leading-relaxed text-muted">{study.landscape}</p>
-          </div>
-        </SectionWrapper>
+        <section data-section>
+          <SectionWrapper className="pt-0">
+            <div className="max-w-prose space-y-4">
+              <h2 className="font-display text-2xl font-semibold">The Landscape</h2>
+              <p className="text-lg leading-relaxed text-muted">{study.landscape}</p>
+            </div>
+          </SectionWrapper>
+        </section>
       )}
 
       {/* Problem */}
       {study.problem && (
-        <SectionWrapper className="bg-surface border-y border-line">
-          <div className="max-w-prose space-y-4">
-            <h2 className="font-display text-2xl font-semibold">The Problem</h2>
-            <p className="text-lg font-semibold leading-relaxed text-accent">{study.problem}</p>
-          </div>
-        </SectionWrapper>
+        <section data-section>
+          <SectionWrapper className="bg-surface border-y border-line">
+            <div className="max-w-prose space-y-4">
+              <h2 className="font-display text-2xl font-semibold">The Problem</h2>
+              <p className="text-lg font-semibold leading-relaxed text-accent">{study.problem}</p>
+            </div>
+          </SectionWrapper>
+        </section>
       )}
 
       {/* Persona */}
       {study.persona && (
-        <SectionWrapper>
-          <div className="space-y-6">
-            <h2 className="font-display text-2xl font-semibold">Persona</h2>
-            <PersonaCard persona={study.persona} />
-          </div>
-        </SectionWrapper>
+        <section data-section>
+          <SectionWrapper>
+            <div className="space-y-6">
+              <h2 className="font-display text-2xl font-semibold">Persona</h2>
+              <PersonaCard persona={study.persona} />
+            </div>
+          </SectionWrapper>
+        </section>
       )}
 
       {/* Journey map */}
       {study.journey && (
-        <SectionWrapper className="pt-0">
-          <div className="space-y-6">
-            <h2 className="font-display text-2xl font-semibold">User Journey Map</h2>
-            <JourneyMap journey={study.journey} />
-          </div>
-        </SectionWrapper>
+        <section data-section>
+          <SectionWrapper className="pt-0">
+            <div className="space-y-6">
+              <h2 className="font-display text-2xl font-semibold">User Journey Map</h2>
+              <JourneyMap journey={study.journey} />
+            </div>
+          </SectionWrapper>
+        </section>
       )}
 
       {/* Insights */}
       {study.insights && study.insights.length > 0 && (
-        <SectionWrapper className="bg-surface border-y border-line">
-          <div className="space-y-6">
-            <h2 className="font-display text-2xl font-semibold">Insights</h2>
-            <div className="space-y-4">
-              {study.insights.map((insight, idx) => (
-                <div key={idx} className="space-y-2">
-                  <div className="font-semibold text-base">{insight.title}</div>
-                  <p className="text-muted leading-relaxed">{insight.body}</p>
-                </div>
-              ))}
+        <section data-section>
+          <SectionWrapper className="bg-surface border-y border-line">
+            <div className="space-y-6">
+              <h2 className="font-display text-2xl font-semibold">Insights</h2>
+              <div className="space-y-4">
+                {study.insights.map((insight, idx) => (
+                  <div key={idx} className="space-y-2">
+                    <div className="font-semibold text-base">{insight.title}</div>
+                    <p className="text-muted leading-relaxed">{insight.body}</p>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-        </SectionWrapper>
+          </SectionWrapper>
+        </section>
       )}
 
       {/* Flow sequence */}
       {study.flow && (
-        <SectionWrapper>
-          <div className="space-y-6">
-            <h2 className="font-display text-2xl font-semibold">User Flow And Solution</h2>
-            <FlowSequence flow={study.flow} screenOrientation={study.screenOrientation} />
-          </div>
-        </SectionWrapper>
+        <section data-section>
+          <SectionWrapper>
+            <div className="space-y-6">
+              <h2 className="font-display text-2xl font-semibold">User Flow And Solution</h2>
+              <FlowSequence flow={study.flow} screenOrientation={study.screenOrientation} />
+            </div>
+          </SectionWrapper>
+        </section>
       )}
 
       {/* Prototype */}
       {study.prototype?.figmaUrl && (
-        <SectionWrapper className="bg-black">
-          <div className="space-y-8">
-            <div className="space-y-4">
-              <h2 className="font-display text-2xl font-semibold text-white">Prototype</h2>
-              <a
-                href={study.prototype.figmaUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary inline-block"
-              >
-                Open in Figma
-              </a>
-            </div>
+        <section data-section>
+          <SectionWrapper className="bg-black">
+            <div className="space-y-8">
+              <div className="space-y-4">
+                <h2 className="font-display text-2xl font-semibold text-white">Prototype</h2>
+                <a
+                  href={study.prototype.figmaUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary inline-block"
+                >
+                  Open in Figma
+                </a>
+              </div>
             {/* Device frame: iPhone for mobile, MacBook for desktop */}
             {study.screenOrientation === 'desktop' ? (
               <div className="relative mx-auto" style={{ maxWidth: '950px' }}>
@@ -243,22 +274,26 @@ export default async function CaseStudyPage({ params }: PageProps) {
             )}
           </div>
         </SectionWrapper>
+        </section>
       )}
 
       {/* The Takeaway */}
-      <SectionWrapper>
-        <div className="space-y-6">
-          <h2 className="font-display text-2xl font-semibold">The Takeaway</h2>
-          <p className="text-base text-muted max-w-prose leading-relaxed">{study.outcome.summary}</p>
-          <StatBlock stats={study.outcome.stats} />
-        </div>
-      </SectionWrapper>
+      <section data-section>
+        <SectionWrapper>
+          <div className="space-y-6">
+            <h2 className="font-display text-2xl font-semibold">The Takeaway</h2>
+            <p className="text-base text-muted max-w-prose leading-relaxed">{study.outcome.summary}</p>
+            <StatBlock stats={study.outcome.stats} />
+          </div>
+        </SectionWrapper>
+      </section>
 
       {/* Learnings */}
       {study.learnings && study.learnings.length > 0 && (
-        <SectionWrapper className="bg-surface border-y border-line">
-          <div className="space-y-6">
-            <h2 className="font-display text-2xl font-semibold">Learnings</h2>
+        <section data-section>
+          <SectionWrapper className="bg-surface border-y border-line">
+            <div className="space-y-6">
+              <h2 className="font-display text-2xl font-semibold">Learnings</h2>
             <ol className="space-y-4">
               {study.learnings.map((learning, idx) => (
                 <li key={idx} className="flex gap-4">
@@ -271,6 +306,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
             </ol>
           </div>
         </SectionWrapper>
+        </section>
       )}
 
       {/* Footer CTA */}
@@ -302,9 +338,23 @@ async function ShowcasePage({
   currentIndex: number
   nextStudy?: any
 }) {
+  // Count sections for progress indicator
+  const sectionCount = [
+    study.hero,
+    study.overview,
+    study.startingPoint,
+    study.iterations,
+    study.designDirection,
+    study.highlights,
+    study.principles,
+    study.result,
+    study.reflection,
+  ].filter(Boolean).length
+
   return (
     <div className="min-h-screen bg-paper">
       <Nav />
+      <SectionProgress sectionCount={sectionCount} />
 
       {/* Back link */}
       <SectionWrapper className="pt-24 sm:pt-28 pb-0">
@@ -347,36 +397,41 @@ async function ShowcasePage({
 
       {/* Hero image */}
       {study.hero && (
-        <SectionWrapper className="pt-0">
-          <div className="relative w-full rounded-lg overflow-hidden border border-line bg-surface">
-            <Image
-              src={study.hero}
-              alt={study.title}
-              width={1200}
-              height={800}
-              className="w-full h-auto"
-              priority
-              quality={95}
-            />
-          </div>
-        </SectionWrapper>
+        <section data-section>
+          <SectionWrapper className="pt-0">
+            <div className="relative w-full rounded-lg overflow-hidden border border-line bg-surface">
+              <Image
+                src={study.hero}
+                alt={study.title}
+                width={1200}
+                height={800}
+                className="w-full h-auto"
+                priority
+                quality={95}
+              />
+            </div>
+          </SectionWrapper>
+        </section>
       )}
 
       {/* Overview */}
       {study.overview && (
-        <SectionWrapper>
-          <div className="max-w-prose space-y-4">
-            <h2 className="font-display text-2xl font-semibold">The Challenge</h2>
-            <p className="text-lg leading-relaxed text-muted">{study.overview}</p>
-          </div>
-        </SectionWrapper>
+        <section data-section>
+          <SectionWrapper>
+            <div className="max-w-prose space-y-4">
+              <h2 className="font-display text-2xl font-semibold">The Challenge</h2>
+              <p className="text-lg leading-relaxed text-muted">{study.overview}</p>
+            </div>
+          </SectionWrapper>
+        </section>
       )}
 
       {/* Where it began */}
       {study.startingPoint && (
-        <SectionWrapper className="bg-surface border-y border-line">
-          <div className="max-w-prose space-y-6">
-            <h2 className="font-display text-2xl font-semibold">Where It Began</h2>
+        <section data-section>
+          <SectionWrapper className="bg-surface border-y border-line">
+            <div className="max-w-prose space-y-6">
+              <h2 className="font-display text-2xl font-semibold">Where It Began</h2>
             <p className="text-base font-semibold text-accent">{study.startingPoint.intro}</p>
             <ul className="space-y-3">
               {study.startingPoint.problems.map((problem: string, idx: number) => (
@@ -389,11 +444,13 @@ async function ShowcasePage({
             <p className="text-base text-muted leading-relaxed">{study.startingPoint.close}</p>
           </div>
         </SectionWrapper>
+        </section>
       )}
 
       {/* Exploration and Iterations */}
       {study.iterations && (
-        <SectionWrapper>
+        <section data-section>
+          <SectionWrapper>
           <div className="space-y-12">
             <div className="space-y-4">
               <h2 className="font-display text-2xl font-semibold">Exploration And Iterations</h2>
@@ -445,12 +502,14 @@ async function ShowcasePage({
             </p>
           </div>
         </SectionWrapper>
+        </section>
       )}
 
       {/* Where it landed - dark band */}
       {study.designDirection && (
-        <div className="bg-black text-white">
-          <SectionWrapper className="py-16">
+        <section data-section>
+          <div className="bg-black text-white">
+            <SectionWrapper className="py-16">
             <div className="space-y-8">
               <div className="space-y-8">
                 <div className="space-y-4">
@@ -501,12 +560,14 @@ async function ShowcasePage({
               )}
             </div>
           </SectionWrapper>
-        </div>
+          </div>
+        </section>
       )}
 
       {/* Highlights */}
       {study.highlights && study.highlights.length > 0 && (
-        <SectionWrapper className="bg-surface border-y border-line">
+        <section data-section>
+          <SectionWrapper className="bg-surface border-y border-line">
           <div className="space-y-6">
             <h2 className="font-display text-2xl font-semibold">What Changed</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -519,11 +580,13 @@ async function ShowcasePage({
             </div>
           </div>
         </SectionWrapper>
+        </section>
       )}
 
       {/* Principles - styled like The Takeaway */}
       {study.principles && study.principles.length > 0 && (
-        <SectionWrapper>
+        <section data-section>
+          <SectionWrapper>
           <div className="space-y-6">
             <h2 className="font-display text-2xl font-semibold">What Guided It</h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
@@ -536,21 +599,25 @@ async function ShowcasePage({
             </div>
           </div>
         </SectionWrapper>
+        </section>
       )}
 
       {/* Result */}
       {study.result && (
-        <SectionWrapper>
-          <div className="space-y-6">
-            <h2 className="font-display text-2xl font-semibold">The Result</h2>
-            <p className="text-base text-muted max-w-prose leading-relaxed">{study.result}</p>
-          </div>
-        </SectionWrapper>
+        <section data-section>
+          <SectionWrapper>
+            <div className="space-y-6">
+              <h2 className="font-display text-2xl font-semibold">The Result</h2>
+              <p className="text-base text-muted max-w-prose leading-relaxed">{study.result}</p>
+            </div>
+          </SectionWrapper>
+        </section>
       )}
 
       {/* Reflection */}
       {study.reflection && study.reflection.length > 0 && (
-        <SectionWrapper className="bg-surface border-y border-line">
+        <section data-section>
+          <SectionWrapper className="bg-surface border-y border-line">
           <div className="space-y-6">
             <h2 className="font-display text-2xl font-semibold">Reflection</h2>
             <ol className="space-y-4">
@@ -565,6 +632,7 @@ async function ShowcasePage({
             </ol>
           </div>
         </SectionWrapper>
+        </section>
       )}
 
       {/* Footer CTA */}
