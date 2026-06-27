@@ -430,46 +430,46 @@ async function ShowcasePage({
 
             {/* Iteration steps - alternating layout */}
             <div className="space-y-12">
-              {study.iterations.steps.map((step: any, idx: number) => (
-                <div
-                  key={idx}
-                  className={`grid grid-cols-1 sm:grid-cols-2 gap-8 items-center ${
-                    idx % 2 === 1 && 'sm:flex-row-reverse'
-                  }`}
-                >
-                  {/* Image on left for even, right for odd */}
-                  <div className={idx % 2 === 1 ? 'sm:col-start-2' : ''}>
-                    <div className="relative rounded-lg overflow-hidden border border-line bg-paper">
-                      <Image
-                        src={step.image}
-                        alt={step.title}
-                        width={1200}
-                        height={900}
-                        className="w-full h-auto"
-                        quality={95}
-                      />
-                    </div>
-                  </div>
-
-                  {/* Text on right for even, left for odd */}
-                  <div className={`max-w-prose space-y-4 ${idx % 2 === 1 ? 'sm:col-start-1' : ''}`}>
-                    <div className="space-y-2">
-                      <div className="flex items-center gap-2">
-                        <span className="font-mono font-semibold text-accent text-sm">
-                          {String(idx + 1).padStart(2, '0')}
-                        </span>
-                        <h3 className="text-xl font-display font-semibold">{step.title}</h3>
+              {study.iterations.steps.map((step: any, idx: number) => {
+                const isEven = idx % 2 === 0
+                return (
+                  <div key={idx} className="flex flex-col sm:flex-row gap-8 items-stretch">
+                    {/* Image container */}
+                    <div className={`flex-1 flex items-center ${!isEven ? 'sm:order-2' : ''}`}>
+                      <div className="relative w-full rounded-lg overflow-hidden border border-line bg-paper">
+                        <Image
+                          src={step.image}
+                          alt={step.title}
+                          width={1200}
+                          height={900}
+                          className="w-full h-auto"
+                          quality={95}
+                        />
                       </div>
-                      {step.resolved && (
-                        <div className="inline-block px-2 py-1 text-xs font-mono font-semibold text-accent bg-accent/10 rounded">
-                          Resolved
-                        </div>
-                      )}
                     </div>
-                    <p className="text-base text-muted leading-relaxed">{step.body}</p>
+
+                    {/* Text container */}
+                    <div className={`flex-1 flex items-center ${!isEven ? 'sm:order-1' : ''}`}>
+                      <div className="max-w-prose space-y-4 w-full">
+                        <div className="space-y-2">
+                          <div className="flex items-center gap-2">
+                            <span className="font-mono font-semibold text-accent text-sm">
+                              {String(idx + 1).padStart(2, '0')}
+                            </span>
+                            <h3 className="text-xl font-display font-semibold">{step.title}</h3>
+                          </div>
+                          {step.resolved && (
+                            <div className="inline-block px-2 py-1 text-xs font-mono font-semibold text-accent bg-accent/10 rounded">
+                              Resolved
+                            </div>
+                          )}
+                        </div>
+                        <p className="text-base text-muted leading-relaxed">{step.body}</p>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              ))}
+                )
+              })}
             </div>
 
             {/* Iterations close */}
