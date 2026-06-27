@@ -27,11 +27,18 @@ export default function WorkIndexRow({ study, index }: WorkIndexRowProps) {
             </div>
           </div>
 
-          {/* Title */}
+          {/* Title and format tag */}
           <div className="col-span-10 sm:col-span-5">
-            <h3 className="text-lg sm:text-xl font-display font-semibold group-hover:text-accent transition-colors">
-              {study.title}
-            </h3>
+            <div className="flex items-center gap-3">
+              <h3 className="text-lg sm:text-xl font-display font-semibold group-hover:text-accent transition-colors">
+                {study.title}
+              </h3>
+              {study.format === 'showcase' && (
+                <span className="inline-block px-2 py-1 text-xs font-mono font-semibold text-accent bg-accent/10 rounded">
+                  Visual showcase
+                </span>
+              )}
+            </div>
           </div>
 
           {/* Meta */}

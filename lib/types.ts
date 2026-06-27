@@ -74,18 +74,42 @@ export interface CaseStudy {
   slug: string
   title: string
   subtitle: string
+  format?: 'case-study' | 'showcase'
   meta: CaseStudyMeta
   facts: CaseStudyFacts
-  landscape: string
-  problem: string
-  persona: CaseStudyPersona
-  journey: CaseStudyJourney
-  insights: CaseStudyInsight[]
-  flow: CaseStudyFlow
-  prototype: CaseStudyPrototype
+  landscape?: string
+  problem?: string
+  persona?: CaseStudyPersona
+  journey?: CaseStudyJourney
+  insights?: CaseStudyInsight[]
+  flow?: CaseStudyFlow
+  prototype?: CaseStudyPrototype
   outcome: CaseStudyOutcome
-  learnings: string[]
+  learnings?: string[]
   hero?: string
   thumbnail?: string
   screenOrientation?: 'mobile' | 'desktop'
+  dek?: string
+  links?: { label: string; href: string }[]
+  overview?: string
+  startingPoint?: {
+    intro: string
+    problems: string[]
+    close: string
+  }
+  iterations?: {
+    intro: string
+    steps: {
+      title: string
+      body: string
+      image: string
+      resolved?: boolean
+    }[]
+    close: string
+  }
+  designDirection?: string
+  highlights?: { title: string; description: string }[]
+  principles?: { title: string; description: string }[]
+  result?: string
+  reflection?: string[]
 }

@@ -47,6 +47,11 @@ export default async function CaseStudyPage({ params }: PageProps) {
 
   const currentIndex = caseStudies.findIndex((s) => s.slug === slug)
   const nextStudy = caseStudies[currentIndex + 1]
+  const isShowcase = study.format === 'showcase'
+
+  if (isShowcase) {
+    return <ShowcasePage study={study} currentIndex={currentIndex} nextStudy={nextStudy} />
+  }
 
   return (
     <div className="min-h-screen bg-paper">
@@ -107,59 +112,71 @@ export default async function CaseStudyPage({ params }: PageProps) {
       )}
 
       {/* Landscape */}
-      <SectionWrapper className="pt-0">
-        <div className="max-w-prose space-y-4">
-          <h2 className="font-display text-2xl font-semibold">The Landscape</h2>
-          <p className="text-lg leading-relaxed text-muted">{study.landscape}</p>
-        </div>
-      </SectionWrapper>
+      {study.landscape && (
+        <SectionWrapper className="pt-0">
+          <div className="max-w-prose space-y-4">
+            <h2 className="font-display text-2xl font-semibold">The Landscape</h2>
+            <p className="text-lg leading-relaxed text-muted">{study.landscape}</p>
+          </div>
+        </SectionWrapper>
+      )}
 
       {/* Problem */}
-      <SectionWrapper className="bg-surface border-y border-line">
-        <div className="max-w-prose space-y-4">
-          <h2 className="font-display text-2xl font-semibold">The Problem</h2>
-          <p className="text-lg font-semibold leading-relaxed text-accent">{study.problem}</p>
-        </div>
-      </SectionWrapper>
+      {study.problem && (
+        <SectionWrapper className="bg-surface border-y border-line">
+          <div className="max-w-prose space-y-4">
+            <h2 className="font-display text-2xl font-semibold">The Problem</h2>
+            <p className="text-lg font-semibold leading-relaxed text-accent">{study.problem}</p>
+          </div>
+        </SectionWrapper>
+      )}
 
       {/* Persona */}
-      <SectionWrapper>
-        <div className="space-y-6">
-          <h2 className="font-display text-2xl font-semibold">Persona</h2>
-          <PersonaCard persona={study.persona} />
-        </div>
-      </SectionWrapper>
+      {study.persona && (
+        <SectionWrapper>
+          <div className="space-y-6">
+            <h2 className="font-display text-2xl font-semibold">Persona</h2>
+            <PersonaCard persona={study.persona} />
+          </div>
+        </SectionWrapper>
+      )}
 
       {/* Journey map */}
-      <SectionWrapper className="pt-0">
-        <div className="space-y-6">
-          <h2 className="font-display text-2xl font-semibold">User Journey Map</h2>
-          <JourneyMap journey={study.journey} />
-        </div>
-      </SectionWrapper>
+      {study.journey && (
+        <SectionWrapper className="pt-0">
+          <div className="space-y-6">
+            <h2 className="font-display text-2xl font-semibold">User Journey Map</h2>
+            <JourneyMap journey={study.journey} />
+          </div>
+        </SectionWrapper>
+      )}
 
       {/* Insights */}
-      <SectionWrapper className="bg-surface border-y border-line">
-        <div className="space-y-6">
-          <h2 className="font-display text-2xl font-semibold">Insights</h2>
-          <div className="space-y-4">
-            {study.insights.map((insight, idx) => (
-              <div key={idx} className="space-y-2">
-                <div className="font-semibold text-base">{insight.title}</div>
-                <p className="text-muted leading-relaxed">{insight.body}</p>
-              </div>
-            ))}
+      {study.insights && study.insights.length > 0 && (
+        <SectionWrapper className="bg-surface border-y border-line">
+          <div className="space-y-6">
+            <h2 className="font-display text-2xl font-semibold">Insights</h2>
+            <div className="space-y-4">
+              {study.insights.map((insight, idx) => (
+                <div key={idx} className="space-y-2">
+                  <div className="font-semibold text-base">{insight.title}</div>
+                  <p className="text-muted leading-relaxed">{insight.body}</p>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      </SectionWrapper>
+        </SectionWrapper>
+      )}
 
       {/* Flow sequence */}
-      <SectionWrapper>
-        <div className="space-y-6">
-          <h2 className="font-display text-2xl font-semibold">User Flow And Solution</h2>
-          <FlowSequence flow={study.flow} screenOrientation={study.screenOrientation} />
-        </div>
-      </SectionWrapper>
+      {study.flow && (
+        <SectionWrapper>
+          <div className="space-y-6">
+            <h2 className="font-display text-2xl font-semibold">User Flow And Solution</h2>
+            <FlowSequence flow={study.flow} screenOrientation={study.screenOrientation} />
+          </div>
+        </SectionWrapper>
+      )}
 
       {/* Prototype */}
       {study.prototype?.figmaUrl && (
@@ -238,21 +255,318 @@ export default async function CaseStudyPage({ params }: PageProps) {
       </SectionWrapper>
 
       {/* Learnings */}
-      <SectionWrapper className="bg-surface border-y border-line">
-        <div className="space-y-6">
-          <h2 className="font-display text-2xl font-semibold">Learnings</h2>
-          <ol className="space-y-4">
-            {study.learnings.map((learning, idx) => (
-              <li key={idx} className="flex gap-4">
-                <span className="font-mono font-semibold text-accent flex-shrink-0">
-                  {idx + 1}.
-                </span>
-                <span className="text-base text-muted leading-relaxed">{learning}</span>
-              </li>
-            ))}
-          </ol>
+      {study.learnings && study.learnings.length > 0 && (
+        <SectionWrapper className="bg-surface border-y border-line">
+          <div className="space-y-6">
+            <h2 className="font-display text-2xl font-semibold">Learnings</h2>
+            <ol className="space-y-4">
+              {study.learnings.map((learning, idx) => (
+                <li key={idx} className="flex gap-4">
+                  <span className="font-mono font-semibold text-accent flex-shrink-0">
+                    {idx + 1}.
+                  </span>
+                  <span className="text-base text-muted leading-relaxed">{learning}</span>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </SectionWrapper>
+      )}
+
+      {/* Footer CTA */}
+      <SectionWrapper className="py-12">
+        <div className="flex flex-col items-center justify-center gap-4">
+          {nextStudy ? (
+            <Link href={`/work/${nextStudy.slug}`} className="btn-primary inline-flex items-center gap-2">
+              Next project: {nextStudy.title} <span aria-hidden="true">&rarr;</span>
+            </Link>
+          ) : (
+            <Link href="/#work" className="btn-primary inline-flex items-center gap-2">
+              <span aria-hidden="true">&larr;</span> Back to all work
+            </Link>
+          )}
         </div>
       </SectionWrapper>
+
+      <Footer />
+    </div>
+  )
+}
+
+async function ShowcasePage({
+  study,
+  currentIndex,
+  nextStudy,
+}: {
+  study: any
+  currentIndex: number
+  nextStudy?: any
+}) {
+  return (
+    <div className="min-h-screen bg-paper">
+      <Nav />
+
+      {/* Back link */}
+      <SectionWrapper className="pt-24 sm:pt-28 pb-0">
+        <Link href="/#work" className="btn-text text-sm inline-flex items-center gap-2">
+          <span aria-hidden="true">&larr;</span> Back to all work
+        </Link>
+      </SectionWrapper>
+
+      {/* Header */}
+      <SectionWrapper className="space-y-8 pt-8">
+        <div className="space-y-4">
+          <h1 className="font-display text-4xl sm:text-5xl font-semibold">{study.title}</h1>
+          <p className="text-xl text-muted max-w-prose">{study.subtitle}</p>
+          {study.dek && <p className="text-lg text-muted max-w-prose font-semibold">{study.dek}</p>}
+        </div>
+
+        {/* Meta row */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-4 border-t border-line">
+          <div>
+            <div className="font-mono text-xs font-semibold text-muted uppercase tracking-wider mb-2">
+              Role
+            </div>
+            <p className="text-base">{study.facts.role}</p>
+          </div>
+          <div>
+            <div className="font-mono text-xs font-semibold text-muted uppercase tracking-wider mb-2">
+              Type
+            </div>
+            <p className="text-base">{study.facts.timeline}</p>
+          </div>
+          <div>
+            <div className="font-mono text-xs font-semibold text-muted uppercase tracking-wider mb-2">
+              Tools
+            </div>
+            <p className="text-base text-sm">{study.facts.approach}</p>
+          </div>
+        </div>
+
+        {/* Links */}
+        {study.links && study.links.length > 0 && (
+          <div className="flex flex-wrap gap-4 pt-4">
+            {study.links.map((link: any, idx: number) => (
+              <a
+                key={idx}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary"
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
+        )}
+      </SectionWrapper>
+
+      {/* Hero image */}
+      {study.hero && (
+        <SectionWrapper className="pt-0">
+          <div className="relative w-full rounded-lg overflow-hidden border border-line bg-surface">
+            <Image
+              src={study.hero}
+              alt={study.title}
+              width={1200}
+              height={800}
+              className="w-full h-auto"
+              priority
+              quality={95}
+            />
+          </div>
+        </SectionWrapper>
+      )}
+
+      {/* Overview */}
+      {study.overview && (
+        <SectionWrapper>
+          <div className="max-w-prose space-y-4">
+            <p className="text-lg leading-relaxed text-muted">{study.overview}</p>
+          </div>
+        </SectionWrapper>
+      )}
+
+      {/* Where it began */}
+      {study.startingPoint && (
+        <SectionWrapper className="bg-surface border-y border-line">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-12">
+            <div className="max-w-prose space-y-6">
+              <h2 className="font-display text-2xl font-semibold">Where it began</h2>
+              <p className="text-base font-semibold text-accent">{study.startingPoint.intro}</p>
+              <ul className="space-y-3">
+                {study.startingPoint.problems.map((problem: string, idx: number) => (
+                  <li key={idx} className="flex gap-3 text-sm text-muted leading-relaxed">
+                    <span className="font-semibold text-accent flex-shrink-0">{idx + 1}.</span>
+                    <span>{problem}</span>
+                  </li>
+                ))}
+              </ul>
+              <p className="text-base text-muted leading-relaxed">{study.startingPoint.close}</p>
+            </div>
+            {/* Before image */}
+            <div className="rounded-lg overflow-hidden border border-line bg-paper">
+              <Image
+                src="/case-studies/weupdaters/before-original.png"
+                alt="Original design"
+                width={1200}
+                height={900}
+                className="w-full h-auto"
+                quality={95}
+              />
+            </div>
+          </div>
+        </SectionWrapper>
+      )}
+
+      {/* Exploration and Iterations */}
+      {study.iterations && (
+        <SectionWrapper>
+          <div className="space-y-12">
+            <div className="space-y-4">
+              <h2 className="font-display text-2xl font-semibold">Exploration and iterations</h2>
+              <p className="text-base text-muted max-w-prose leading-relaxed">{study.iterations.intro}</p>
+            </div>
+
+            {/* Iteration steps - alternating layout */}
+            <div className="space-y-12">
+              {study.iterations.steps.map((step: any, idx: number) => (
+                <div
+                  key={idx}
+                  className={`grid grid-cols-1 sm:grid-cols-2 gap-8 items-center ${
+                    idx % 2 === 1 && 'sm:flex-row-reverse'
+                  }`}
+                >
+                  {/* Image on left for even, right for odd */}
+                  <div className={idx % 2 === 1 ? 'sm:col-start-2' : ''}>
+                    <div className="relative rounded-lg overflow-hidden border border-line bg-paper">
+                      <Image
+                        src={step.image}
+                        alt={step.title}
+                        width={1200}
+                        height={900}
+                        className="w-full h-auto"
+                        quality={95}
+                      />
+                    </div>
+                  </div>
+
+                  {/* Text on right for even, left for odd */}
+                  <div className={`max-w-prose space-y-4 ${idx % 2 === 1 ? 'sm:col-start-1' : ''}`}>
+                    <div className="space-y-2">
+                      <div className="flex items-center gap-2">
+                        <span className="font-mono font-semibold text-accent text-sm">
+                          {String(idx + 1).padStart(2, '0')}
+                        </span>
+                        <h3 className="text-xl font-display font-semibold">{step.title}</h3>
+                      </div>
+                      {step.resolved && (
+                        <div className="inline-block px-2 py-1 text-xs font-mono font-semibold text-accent bg-accent/10 rounded">
+                          Resolved
+                        </div>
+                      )}
+                    </div>
+                    <p className="text-base text-muted leading-relaxed">{step.body}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Iterations close */}
+            <p className="text-base text-muted max-w-prose leading-relaxed pt-8 border-t border-line">
+              {study.iterations.close}
+            </p>
+          </div>
+        </SectionWrapper>
+      )}
+
+      {/* Where it landed - dark band */}
+      {study.designDirection && (
+        <div className="bg-black text-white">
+          <SectionWrapper className="py-16">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-12 items-center">
+              <div className="max-w-prose space-y-6">
+                <h2 className="font-display text-2xl font-semibold text-white">Where it landed</h2>
+                <p className="text-lg leading-relaxed text-gray-300">{study.designDirection}</p>
+              </div>
+              {/* Centrepiece image */}
+              <div className="rounded-lg overflow-hidden border border-gray-700 bg-gray-900">
+                <Image
+                  src="/case-studies/weupdaters/centrepiece-3d.png"
+                  alt="Final design centrepiece"
+                  width={1200}
+                  height={900}
+                  className="w-full h-auto"
+                  quality={95}
+                />
+              </div>
+            </div>
+          </SectionWrapper>
+        </div>
+      )}
+
+      {/* Highlights */}
+      {study.highlights && study.highlights.length > 0 && (
+        <SectionWrapper className="bg-surface border-y border-line">
+          <div className="space-y-6">
+            <h2 className="font-display text-2xl font-semibold">What changed</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {study.highlights.map((highlight: any, idx: number) => (
+                <div key={idx} className="space-y-3">
+                  <h3 className="text-base font-semibold">{highlight.title}</h3>
+                  <p className="text-sm text-muted leading-relaxed">{highlight.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </SectionWrapper>
+      )}
+
+      {/* Principles */}
+      {study.principles && study.principles.length > 0 && (
+        <SectionWrapper>
+          <div className="space-y-6">
+            <h2 className="font-display text-2xl font-semibold">What guided it</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+              {study.principles.map((principle: any, idx: number) => (
+                <div key={idx} className="space-y-3">
+                  <h3 className="text-base font-semibold">{principle.title}</h3>
+                  <p className="text-sm text-muted leading-relaxed">{principle.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </SectionWrapper>
+      )}
+
+      {/* Result */}
+      {study.result && (
+        <SectionWrapper>
+          <div className="space-y-6">
+            <h2 className="font-display text-2xl font-semibold">Result</h2>
+            <p className="text-base text-muted max-w-prose leading-relaxed">{study.result}</p>
+          </div>
+        </SectionWrapper>
+      )}
+
+      {/* Reflection */}
+      {study.reflection && study.reflection.length > 0 && (
+        <SectionWrapper className="bg-surface border-y border-line">
+          <div className="space-y-6">
+            <h2 className="font-display text-2xl font-semibold">Reflection</h2>
+            <ol className="space-y-4">
+              {study.reflection.map((item: string, idx: number) => (
+                <li key={idx} className="flex gap-4">
+                  <span className="font-mono font-semibold text-accent flex-shrink-0">
+                    {idx + 1}.
+                  </span>
+                  <span className="text-base text-muted leading-relaxed">{item}</span>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </SectionWrapper>
+      )}
 
       {/* Footer CTA */}
       <SectionWrapper className="py-12">
