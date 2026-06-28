@@ -13,7 +13,7 @@ export default function Footer() {
             <p className="text-sm text-muted">Product & UI-UX Designer</p>
           </div>
 
-          <div className="flex gap-10 sm:gap-12">
+          <div className="flex gap-16 sm:gap-20">
             {/* Navigation */}
             <div>
               <div className="font-semibold text-sm mb-4">Navigation</div>
