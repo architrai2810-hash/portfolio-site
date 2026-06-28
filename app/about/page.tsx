@@ -39,7 +39,7 @@ export default function AboutPage() {
       </SectionWrapper>
 
       {/* Header */}
-      <SectionWrapper className="space-y-8 pt-8">
+      <SectionWrapper className="space-y-12 pt-8">
         <h1 className="font-display text-4xl sm:text-5xl font-semibold">About</h1>
         <p className="text-xl text-muted max-w-prose">
           I'm a product designer focused on building clear, usable interfaces for complex products.
@@ -63,13 +63,6 @@ export default function AboutPage() {
             <h2 className="font-display text-2xl font-semibold text-ink">What I Care About</h2>
             <p>
               I'm drawn to problems that feel like puzzles: how do you make the complex feel simple. I love fintech and SaaS because they sit at that edge. A good dashboard doesn't need to be beautiful, it needs to answer the question your user came with, in the time it takes to glance. I'm skeptical of cleverness for its own sake. I believe in asking hard questions before I design, and I believe in testing with real users.
-            </p>
-          </div>
-
-          <div className="space-y-4">
-            <h2 className="font-display text-2xl font-semibold text-ink">Tools</h2>
-            <p>
-              I design in Figma and prototype there too. I'm comfortable in Illustrator and Photoshop for visual design, and InDesign for layouts. For motion, I use Premiere Pro, and I still sketch on Procreate when I want to think with a pencil instead of a cursor. For 3D and product design work, I use Fusion360, AutoCAD, and Blender. For rapid iteration and exploring ideas quickly, I also use AI tools like Claude, ChatGPT, Gemini, Figma Make, and Google Stitch.
             </p>
           </div>
 
@@ -108,7 +101,7 @@ export default function AboutPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a href="mailto:architrai2810@gmail.com" className="btn-primary">
-              architrai2810@gmail.com
+              Email
             </a>
             <a
               href="https://www.linkedin.com/in/archit-rai/"
