@@ -45,9 +45,9 @@ export default function WorkIndexRow({ study, index }: WorkIndexRowProps) {
             <div>{study.facts.timeline}</div>
           </div>
 
-          {/* Outcome */}
+          {/* Description */}
           <div className="col-span-12 sm:col-span-3 text-sm text-muted line-clamp-2">
-            {study.outcome.summary.split('.')[0]}
+            {study.description ?? study.outcome.summary.split('.')[0]}
           </div>
         </div>
       </div>

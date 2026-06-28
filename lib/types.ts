@@ -90,6 +90,7 @@ export interface CaseStudy {
   thumbnail?: string
   screenOrientation?: 'mobile' | 'desktop'
   dek?: string
+  description?: string
   links?: { label: string; href: string }[]
   overview?: string
   startingPoint?: {

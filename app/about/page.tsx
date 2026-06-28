@@ -109,21 +109,21 @@ export default function AboutPage() {
               I completed a UX/UI design internship at Actin Technologies in Pune, working on SaaS dashboard products end to end: interviewing users, building personas, mapping journeys, sketching flows, designing high-fidelity interfaces in Figma, and running alpha tests to watch people actually use what I designed.
             </p>
             <p>
-              Along the way, I've also picked up a UX/UI internship at Leo IT Services, freelance graphic design work with WapVenture, and video editing for The Feminist Times, each one teaching me something different about working with real briefs and real deadlines.
+              Along the way, I've also picked up a UX/UI internship at Leo IT Services, a graphic design internship at WapVenture, and freelance video editing for The Feminist Times, each one teaching me something different about working with real briefs and real deadlines.
             </p>
           </div>
 
           <div className="space-y-4">
             <h2 className="font-display text-2xl font-semibold text-ink">What I Care About</h2>
             <p>
-              I'm drawn to problems that feel like puzzles: how do you make the complex feel simple. A good interface doesn't need to be flashy, it needs to answer the question a user came with, in the time it takes to glance. I'd rather ask the right questions early than chase a clever idea later, and I always want real people putting my work to the test before I call it done.
+              I'm drawn to problems that feel like puzzles: how do you make the complex feel simple. A good interface doesn't need to be flashy, it needs to answer the question a user came with, in the time it takes to glance. I'd rather spend longer understanding the problem than rushing to a solution that just looks nice.
             </p>
           </div>
 
           <div className="space-y-4">
             <h2 className="font-display text-2xl font-semibold text-ink">What's Next</h2>
             <p>
-              I'm looking for a UX/UI or Product Designer role where I can keep learning, contribute from day one, and collaborate closely with people who care about getting the details right. The domain matters less to me than the chance to grow alongside a team that pushes me to do better work.
+              I'm looking for a UX/UI or Product Designer role where I can keep learning, contribute from day one, and collaborate closely with people who care about getting the details right. I'm an avid learner who's always up for exploring something new, so I'm excited to see where that curiosity takes me next.
             </p>
           </div>
         </div>

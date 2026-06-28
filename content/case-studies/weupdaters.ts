@@ -7,12 +7,12 @@ export const weupdaters: CaseStudy = {
   format: 'showcase',
   screenOrientation: 'desktop',
   meta: {
-    role: 'UI Design',
+    role: 'UI Designer',
     year: '2026',
     type: 'Visual Showcase · 2-week internship project',
   },
   facts: {
-    role: 'UI Design',
+    role: 'UI Designer',
     timeline: '2 weeks',
     approach: 'Figma, Blender',
   },
@@ -118,7 +118,7 @@ export const weupdaters: CaseStudy = {
     'A landing page works best when every design choice serves a clear business goal, here, getting visitors to reach out.',
   ],
   outcome: {
-    summary: 'A visual showcase of the landing page redesign across six iterations.',
+    summary: 'A visual showcase of the landing page redesign across various iterations.',
     stats: [],
   },
   hero: '/case-studies/weupdaters/hero-final.png',

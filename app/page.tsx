@@ -56,13 +56,13 @@ export default function Home() {
           <h2 className="font-display text-3xl font-semibold">About</h2>
           <div className="space-y-4 text-lg text-muted leading-relaxed">
             <p>
-              I'm early-career, hungry to solve real problems, and I care about how things feel to use. My focus is UX/UI and product design, sharpened by an earlier path through drafting, CAD, and visual design.
+              I'm early-career, hungry to solve real problems, and I care about how things feel to use. My focus is UX/UI and product design: research-led flows, clean visual systems, and interfaces that hold up under real use.
             </p>
             <p>
-              At the National Institute of Fashion Technology, I learned to think like a researcher before a designer. I completed a UX/UI design internship at Actin Technologies, designing fintech dashboards end to end, from user interviews to prototypes that users actually test.
+              At the National Institute of Fashion Technology, I learned to think like a researcher before a designer. I completed a UX/UI design internship at Actin Technologies, designing SaaS dashboards end to end, from user interviews to working prototypes.
             </p>
             <p>
-              I'm drawn to problems in fintech, real estate, and tools. I work in Figma, and I'm comfortable in Illustrator, Photoshop, Blender, and Fusion360.
+              I'm drawn to real problems wherever they show up. I work in Figma, and I'm comfortable in Illustrator, Photoshop, Blender, and Fusion360.
             </p>
             <div className="pt-4">
               <a href="/about" className="btn-text inline-flex items-center gap-2">
