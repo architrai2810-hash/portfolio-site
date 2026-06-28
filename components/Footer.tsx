@@ -10,10 +10,10 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="font-display font-semibold text-lg mb-2">Archit Rai</div>
-            <p className="text-sm text-muted">Product & UI-UX Designer</p>
+            <p className="text-sm text-muted">Product & UX/UI Designer</p>
           </div>
 
-          <div className="flex gap-16 sm:gap-20">
+          <div className="flex gap-32 sm:gap-40">
             {/* Navigation */}
             <div>
               <div className="font-semibold text-sm mb-4">Navigation</div>

@@ -3,12 +3,12 @@ import './globals.css'
 import ScrollToTop from '@/components/ScrollToTop'
 
 export const metadata: Metadata = {
-  title: 'Archit Rai - Product & UI-UX Designer',
+  title: 'Archit Rai - Product & UX/UI Designer',
   description:
-    'Product and UI-UX designer focused on clear, usable interfaces for complex products. View my work in fintech and SaaS.',
+    'Product and UX/UI designer focused on clear, usable interfaces for complex products. View my work in fintech and SaaS.',
   openGraph: {
-    title: 'Archit Rai - Product & UI-UX Designer',
-    description: 'Product and UI-UX designer. SaaS and fintech portfolio.',
+    title: 'Archit Rai - Product & UX/UI Designer',
+    description: 'Product and UX/UI designer. SaaS and fintech portfolio.',
     type: 'website',
   },
 }
