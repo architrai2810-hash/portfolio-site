@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   const experience = [
     {
-      company: 'Actin Technologies Pvt Ltd',
+      company: 'Actin Technologies India Pvt. Ltd.',
       role: 'UX/UI Intern',
       dates: 'Dec 2025 - Apr 2026',
       type: 'On Site',
