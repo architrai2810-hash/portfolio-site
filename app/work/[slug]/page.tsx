@@ -81,7 +81,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
       </SectionWrapper>
 
       {/* Header */}
-      <SectionWrapper className="space-y-8 pt-8">
+      <SectionWrapper className="space-y-12 pt-8">
         <div className="space-y-6">
           <h1 className="font-display text-4xl sm:text-5xl font-semibold">{study.title}</h1>
           <p className="text-xl text-muted max-w-prose">{study.subtitle}</p>
@@ -364,7 +364,7 @@ async function ShowcasePage({
       </SectionWrapper>
 
       {/* Header */}
-      <SectionWrapper className="space-y-8 pt-8">
+      <SectionWrapper className="space-y-12 pt-8">
         <div className="space-y-6">
           <h1 className="font-display text-4xl sm:text-5xl font-semibold">{study.title}</h1>
           <p className="text-xl text-muted max-w-prose">{study.subtitle}</p>

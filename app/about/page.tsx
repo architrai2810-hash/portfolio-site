@@ -10,6 +10,33 @@ export const metadata: Metadata = {
 }
 
 export default function AboutPage() {
+  const experience = [
+    {
+      company: 'Actin Technologies Pvt Ltd',
+      role: 'UX/UI Intern',
+      dates: 'Dec 2025 - Apr 2026',
+      type: 'On Site',
+    },
+    {
+      company: 'Leo IT Services',
+      role: 'UX/UI Intern',
+      dates: 'Jun 2025 - Jul 2025',
+      type: 'On Site',
+    },
+    {
+      company: 'WapVenture',
+      role: 'Graphic Designer',
+      dates: 'May 2023 - Aug 2023',
+      type: 'Remote',
+    },
+    {
+      company: 'The Feminist Times',
+      role: 'Freelance Video Editor',
+      dates: 'Mar 2023 - May 2023',
+      type: 'Remote',
+    },
+  ]
+
   const tools = [
     'Figma',
     'Illustrator',
@@ -39,11 +66,35 @@ export default function AboutPage() {
       </SectionWrapper>
 
       {/* Header */}
-      <SectionWrapper className="space-y-12 pt-8">
+      <SectionWrapper className="pt-8">
         <h1 className="font-display text-4xl sm:text-5xl font-semibold">About</h1>
-        <p className="text-xl text-muted max-w-prose">
+        <p className="text-xl text-muted max-w-prose mt-8">
           I'm a product designer focused on building clear, usable interfaces for complex products.
         </p>
+      </SectionWrapper>
+
+      {/* Work Experience */}
+      <SectionWrapper className="bg-black pt-0">
+        <div className="space-y-8">
+          <h2 className="font-display text-2xl font-semibold text-white">Work Experience</h2>
+          <div className="divide-y divide-white/10 border-t border-b border-white/10">
+            {experience.map((job, idx) => (
+              <div
+                key={idx}
+                className="grid grid-cols-1 sm:grid-cols-3 gap-4 py-6"
+              >
+                <div className="sm:col-span-2">
+                  <h3 className="text-lg font-semibold text-white">{job.company}</h3>
+                  <p className="text-sm text-gray-400 mt-1">{job.role}</p>
+                </div>
+                <div className="sm:text-right">
+                  <p className="font-mono text-sm text-gray-400">{job.dates}</p>
+                  <p className="font-mono text-xs text-gray-500 mt-1">{job.type}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </SectionWrapper>
 
       {/* Main content */}
