@@ -74,7 +74,7 @@ export default function Home() {
       </SectionWrapper>
 
       {/* Closing CTA */}
-      <SectionWrapper className="bg-surface border-y border-line">
+      <SectionWrapper id="contact" className="bg-surface border-y border-line">
         <div className="space-y-8">
           <h2 className="font-display text-3xl sm:text-4xl font-semibold max-w-prose">
             Open to UX/UI and Product Designer roles.

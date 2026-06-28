@@ -17,6 +17,7 @@ export const weupdaters: CaseStudy = {
     approach: 'Figma, Blender',
   },
   dek: 'A focused redesign that gives a digital-services company the clarity, credibility and modern feel its landing page was missing.',
+  description: 'A landing page redesign explored across several iterations.',
   prototype: {
     figmaUrl: 'https://www.figma.com/proto/dBIvyKne2RzQeIoKfKoGni/WeUpdaters?node-id=293-366&t=YL9hGq3ZH5nEjETr-1',
   },

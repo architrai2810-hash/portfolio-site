@@ -31,15 +31,15 @@ export default function Nav() {
 
         {/* Center Links */}
         <div className="hidden sm:flex items-center gap-8">
-          <a href="#work" className="text-sm text-muted hover:text-ink transition-colors">
+          <Link href="/#work" className="text-sm text-muted hover:text-ink transition-colors">
             Work
-          </a>
+          </Link>
           <Link href="/about" className="text-sm text-muted hover:text-ink transition-colors">
             About
           </Link>
-          <a href="#contact" className="text-sm text-muted hover:text-ink transition-colors">
+          <Link href="/#contact" className="text-sm text-muted hover:text-ink transition-colors">
             Contact
-          </a>
+          </Link>
         </div>
 
         {/* CTA Button */}
