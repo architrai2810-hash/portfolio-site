@@ -14,7 +14,7 @@ export const uxverse: CaseStudy = {
     timeline: '2 weeks',
     approach: 'Persona, Journey, User Flow, Interaction and UI Design, Prototype.',
   },
-  description: 'A website concept for a design conference, designed to turn curious visitors into confident registrants by answering what the event is and who it\'s for.',
+  description: 'A website concept for a design conference that turns curious visitors into confident registrants.',
   landscape:
     'For most attendees, an event\'s website is the only touchpoint before deciding to show up, yet most are static brochures, a hero image, some dates and a register button. That leaves a lot unanswered, especially for students and early-career designers, who end up piecing together an impression from scattered posts and a few photos. The gap between sparking interest and earning a registration is what UXVerse explores.',
   problem:

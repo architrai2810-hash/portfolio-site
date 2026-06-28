@@ -14,7 +14,7 @@ export const infrawealth: CaseStudy = {
     timeline: '4 weeks',
     approach: 'Interviews, Persona, Journey, User Flow, UI Design, Prototype, Alpha Testing.',
   },
-  description: 'A mobile app concept that helps first-time investors evaluate, compare and invest in real estate with the same confidence they bring to stocks.',
+  description: 'A mobile app that helps first-time investors evaluate and invest in real estate with confidence.',
   landscape:
     'Apps made stocks and mutual funds simple, transparent and broker-free. Real estate never made that leap and stays offline, opaque and broker-led, with information scattered everywhere. For people who manage money digitally, property feels out of reach, not for lack of interest or capital, but because the experience feels intimidating and a decade behind. That gap, high aspiration and low accessibility, is what InfraWealth explores.',
   problem:
