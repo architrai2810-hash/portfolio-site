@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer className="bg-surface border-t border-line">
       <div className="container-wide py-10">
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 mb-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 mb-8">
           {/* Brand */}
           <div>
             <div className="font-display font-semibold text-lg mb-2">Archit Rai</div>
@@ -35,9 +35,9 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Elsewhere */}
+          {/* Let's Connect */}
           <div>
-            <div className="font-semibold text-sm mb-4">Elsewhere</div>
+            <div className="font-semibold text-sm mb-4">Let's Connect</div>
             <ul className="space-y-2">
               <li>
                 <a
@@ -65,18 +65,6 @@ export default function Footer() {
                   className="text-sm text-muted hover:text-ink transition-colors"
                 >
                   Email
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Contact */}
-          <div>
-            <div className="font-semibold text-sm mb-4">Contact</div>
-            <ul className="space-y-2">
-              <li>
-                <a href="mailto:architrai2810@gmail.com" className="text-sm text-accent hover:text-blue-700">
-                  architrai2810@gmail.com
                 </a>
               </li>
             </ul>
