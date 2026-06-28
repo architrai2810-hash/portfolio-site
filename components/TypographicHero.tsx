@@ -179,8 +179,8 @@ export default function TypographicHero() {
             prefersReducedMotion ? {} : { duration: 0.4, delay: 0.4, ease: 'easeOut' }
           }
         >
-          I'm a product designer focused on UX/UI, completing my B.Des in Product Experience
-          Design at the National Institute of Fashion Technology.
+          I'm a product designer focused on UX/UI, with a B.Des in Product Experience
+          Design from the National Institute of Fashion Technology.
         </motion.p>
 
         {/* CTAs */}

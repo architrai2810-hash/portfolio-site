@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'About - Archit Rai',
-  description: 'UX/UI and product designer completing a B.Des at the National Institute of Fashion Technology.',
+  description: 'UX/UI and product designer with a B.Des from the National Institute of Fashion Technology.',
 }
 
 export default function AboutPage() {
@@ -103,24 +103,27 @@ export default function AboutPage() {
           <div className="space-y-4">
             <h2 className="font-display text-2xl font-semibold text-ink">The Background</h2>
             <p>
-              My focus is UX/UI and product design — research-led flows, clean visual systems, and interfaces that hold up under real use. I'm completing my B.Des in Product Experience Design at the National Institute of Fashion Technology, expected in 2026, where the program taught me to think like a researcher before a designer. Before that, I freelanced as a graphic designer and video editor, and spent time with CAD and 3D modeling, work that sharpened how I think spatially and solve for constraints.
+              My focus is UX/UI and product design — research-led flows, clean visual systems, and interfaces that hold up under real use. I hold a B.Des in Product Experience Design from the National Institute of Fashion Technology, where the program taught me to think like a researcher before a designer. Before that, I freelanced as a graphic designer and video editor, and spent time with CAD and 3D modeling, work that sharpened how I think spatially and solve for constraints.
             </p>
             <p>
               I completed a UX/UI design internship at Actin Technologies in Pune, working on SaaS dashboard products end to end: interviewing users, building personas, mapping journeys, sketching flows, designing high-fidelity interfaces in Figma, and running alpha tests to watch people actually use what I designed.
+            </p>
+            <p>
+              Along the way, I've also picked up a UX/UI internship at Leo IT Services, freelance graphic design work with WapVenture, and video editing for The Feminist Times, each one teaching me something different about working with real briefs and real deadlines.
             </p>
           </div>
 
           <div className="space-y-4">
             <h2 className="font-display text-2xl font-semibold text-ink">What I Care About</h2>
             <p>
-              I'm drawn to problems that feel like puzzles: how do you make the complex feel simple. A good interface doesn't need to be flashy, it needs to answer the question a user came with, in the time it takes to glance. I'm skeptical of cleverness for its own sake. I'd rather ask the hard questions before I design, and test with real users before I call anything done.
+              I'm drawn to problems that feel like puzzles: how do you make the complex feel simple. A good interface doesn't need to be flashy, it needs to answer the question a user came with, in the time it takes to glance. I'd rather ask the right questions early than chase a clever idea later, and I always want real people putting my work to the test before I call it done.
             </p>
           </div>
 
           <div className="space-y-4">
             <h2 className="font-display text-2xl font-semibold text-ink">What's Next</h2>
             <p>
-              I'm looking for a UX/UI or Product Designer role where I can keep learning, contribute from day one, and collaborate closely with people who care about getting the details right. Fintech, real estate tech, and tools are where I'd love to dig in first, but I'm always up for a good problem.
+              I'm looking for a UX/UI or Product Designer role where I can keep learning, contribute from day one, and collaborate closely with people who care about getting the details right. The domain matters less to me than the chance to grow alongside a team that pushes me to do better work.
             </p>
           </div>
         </div>
