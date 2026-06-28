@@ -74,7 +74,7 @@ export default function AboutPage() {
       </SectionWrapper>
 
       {/* Work Experience */}
-      <SectionWrapper className="bg-black pt-0">
+      <SectionWrapper className="bg-black">
         <div className="space-y-8">
           <h2 className="font-display text-2xl font-semibold text-white">Work Experience</h2>
           <div className="divide-y divide-white/10 border-t border-b border-white/10">
@@ -130,6 +130,9 @@ export default function AboutPage() {
       <SectionWrapper className="bg-surface border-y border-line">
         <div className="space-y-6">
           <h2 className="font-display text-2xl font-semibold">Tools</h2>
+          <p className="text-lg text-muted max-w-prose leading-relaxed">
+            I design in Figma and prototype there too. I'm comfortable in Illustrator and Photoshop for visual design, and InDesign for layouts. For motion, I use Premiere Pro, and I still sketch on Procreate when I want to think with a pencil instead of a cursor. For 3D and product design work, I use Fusion360, AutoCAD, and Blender. For rapid iteration and exploring ideas quickly, I also use AI tools like Claude, ChatGPT, Gemini, Figma Make, and Google Stitch.
+          </p>
           <div className="flex flex-wrap gap-2">
             {tools.map((tool) => (
               <div
