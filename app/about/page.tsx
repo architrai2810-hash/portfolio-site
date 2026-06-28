@@ -98,7 +98,7 @@ export default function AboutPage() {
       </SectionWrapper>
 
       {/* Main content */}
-      <SectionWrapper className="pt-0">
+      <SectionWrapper>
         <div className="max-w-prose space-y-8 text-lg leading-relaxed text-muted">
           <div className="space-y-4">
             <h2 className="font-display text-2xl font-semibold text-ink">The Background</h2>
@@ -106,21 +106,21 @@ export default function AboutPage() {
               My focus is UX/UI and product design — research-led flows, clean visual systems, and interfaces that hold up under real use. I'm completing my B.Des in Product Experience Design at the National Institute of Fashion Technology, expected in 2026, where the program taught me to think like a researcher before a designer. Before that, I freelanced as a graphic designer and video editor, and spent time with CAD and 3D modeling, work that sharpened how I think spatially and solve for constraints.
             </p>
             <p>
-              I completed a UX/UI design internship at Actin Technologies in Pune, working on SaaS dashboard products end to end: interviewing users, building personas, mapping journeys, sketching flows, designing high-fidelity interfaces in Figma, and running alpha tests to watch people actually use what I designed. I'd previously interned in UX/UI at Leo IT Services, where I worked directly with users to shape product decisions.
+              I completed a UX/UI design internship at Actin Technologies in Pune, working on SaaS dashboard products end to end: interviewing users, building personas, mapping journeys, sketching flows, designing high-fidelity interfaces in Figma, and running alpha tests to watch people actually use what I designed.
             </p>
           </div>
 
           <div className="space-y-4">
             <h2 className="font-display text-2xl font-semibold text-ink">What I Care About</h2>
             <p>
-              I'm drawn to problems that feel like puzzles: how do you make the complex feel simple. I love fintech and SaaS because they sit at that edge. A good dashboard doesn't need to be beautiful, it needs to answer the question your user came with, in the time it takes to glance. I'm skeptical of cleverness for its own sake. I believe in asking hard questions before I design, and I believe in testing with real users.
+              I'm drawn to problems that feel like puzzles: how do you make the complex feel simple. A good interface doesn't need to be flashy, it needs to answer the question a user came with, in the time it takes to glance. I'm skeptical of cleverness for its own sake. I'd rather ask the hard questions before I design, and test with real users before I call anything done.
             </p>
           </div>
 
           <div className="space-y-4">
             <h2 className="font-display text-2xl font-semibold text-ink">What's Next</h2>
             <p>
-              I'm open to UX/UI and Product Designer roles, ideally where I can do end-to-end design: research, flows, high-fidelity UI, and work with developers who care about quality. I'm most interested in fintech, real estate tech, and tools.
+              I'm looking for a UX/UI or Product Designer role where I can keep learning, contribute from day one, and collaborate closely with people who care about getting the details right. Fintech, real estate tech, and tools are where I'd love to dig in first, but I'm always up for a good problem.
             </p>
           </div>
         </div>
